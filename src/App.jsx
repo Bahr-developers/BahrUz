@@ -1,4 +1,3 @@
-// import { Outlet, Route, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import "./index.css";
 import Home from "./pages/Home.jsx";
 import Services from "./pages/Services.jsx";
@@ -10,13 +9,14 @@ import ErrorPage from "./pages/ErrorPage.jsx";
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react";
 
-// export const router = createBrowserRouter(
-//   createRoutesFromElements(
-    
-//   )
-// );
 
 function App() {
+
+  return (
+    <>
+      <main>
+        <Outlet />
+      </main>
   // language
   if (!localStorage.getItem("language")) localStorage.setItem("language", "uz");
   const [language, setLanguage] = useState(localStorage.getItem("language"));
@@ -34,6 +34,7 @@ function App() {
         <Route path="blog" element={<Blog />} />
         <Route path="*" element={<ErrorPage />} />
     </Routes>
+
     </>
   );
 }

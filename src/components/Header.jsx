@@ -1,7 +1,6 @@
 
 import {NavLink, Link, Outlet } from "react-router-dom";
 import logo from "../assets/logo.jpg";
-
 // Links
 import { Links } from "../utils/links";
 import { useEffect, useState } from "react";
@@ -11,7 +10,8 @@ function Header({language, onLanguage}) {
   const getTheme = localStorage.getItem("theme");
   const [mode, setMode] = useState(getTheme || "light");
   const element = document.documentElement;
-
+  // Hamburger menu
+  const [openMenu, setOpenMenu] = useState(false);
   // mode
  useEffect(() => {
    switch (mode) {
@@ -59,11 +59,23 @@ function Header({language, onLanguage}) {
                 className="pt-2 text-xl"
                 onClick={() => setMode(mode === "light" ? "dark" : "light")}
               >
-                <ion-icon
-                  name={`${mode === "light" ? "sunny" : "moon"}`}
-                ></ion-icon>
-              </button>
-              <div className="bg-white py-1 px-2 rounded cursor-pointer dark:bg-transparent">
+                <option value="uz">uz</option>
+                <option value="ru">ru</option>
+                <option value="en">en</option>
+              </select>
+            </div>
+            <button className="text-3xl text-black flex items-center pt-1 md:hidden dark:text-white">
+              <ion-icon
+                name={openMenu ? "close" : "menu"}
+                onClick={() => setOpenMenu(!openMenu)}
+              ></ion-icon>
+            </button>
+          </div>
+        </nav>
+        {openMenu && (
+          <div className="fixed top-0 left-0 w-[50%] bg-white min-h-screen backdrop-blur-md">
+            <div>
+              <div className="bg-white py-1 px-2 rounded cursor-pointer dark:bg-transparent ">
                 <select
                   onChange={handleLanguageChange}
                   className="bg-transparent w-full outline-none cursor-pointer"
@@ -74,13 +86,22 @@ function Header({language, onLanguage}) {
                   <option value="en">en</option>
                 </select>
               </div>
+              {Links.map((link) => {
+                return (
+                  <Link to={link.to} key={link.id} className="text-black block">
+                    {link.content[language]}
+                  </Link>
+                );
+              })}
             </div>
-          </nav>
-        </div>
-      </header>
-      <Outlet/>
-    </>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+    <Outlet/>
+   </>
   )
 }
 
-export default Header
+export default Header;
