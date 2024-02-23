@@ -29,6 +29,7 @@ function Header({language, onLanguage}) {
  }, [mode]);
 
   const handleLanguageChange = (e) => {
+    console.log(e);
     localStorage.setItem("language", e.target.value);
     onLanguage(e.target.value);
   };
@@ -89,7 +90,7 @@ return (
             ></ion-icon>
           </button>
           <div>
-            <div className="py-1 px-2 rounded cursor-pointer dark:bg-slate-500 mt-16 max-w-[120px] mx-6 bg-slate-400 text-white ">
+            <div className="py-1 px-2 rounded cursor-pointer dark:bg-slate-500 mt-16 max-w-[120px] mx-6 bg-slate-400 text-white">
               <select
                 onChange={handleLanguageChange}
                 className="bg-transparent w-full outline-none cursor-pointer"
