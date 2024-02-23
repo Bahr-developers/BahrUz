@@ -16,6 +16,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <ToastContainer autoClose={2000} />            
         </BrowserRouter>        
       </QueryClientProvider>
-    </React.StrictMode>
-  
+    </React.StrictMode>  
 );
