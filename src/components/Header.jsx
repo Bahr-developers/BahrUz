@@ -42,7 +42,7 @@ return (
               <img className="w-16 rounded-full shadow-md" src={logo} alt="logo" />
             </Link>
             <div className="flex items-center gap-10">
-              <div className="flex items-center gap-6">
+              <div className="flex items-center gap-6 ">
                 {Links.map((link) => {
                   return (
                     <NavLink
@@ -59,9 +59,9 @@ return (
                 className="pt-2 text-xl"
                 onClick={() => setMode(mode === "light" ? "dark" : "light")}
               >
-                <ion-icon
-                name={`${mode === "light" ? "sunny" : "moon"}`}
-              ></ion-icon>
+                    <ion-icon
+                    name={`${mode === "light" ? "sunny" : "moon"}`}
+                  ></ion-icon>
               </button>
                 <select className="dark:bg-transparent">
                 <option value="uz">uz</option>
@@ -69,7 +69,7 @@ return (
                 <option value="en">en</option>
               </select>
             </div>
-            <button className="text-3xl text-black flex items-center  md:hidden dark:text-white bg-[#ffffff29] rounded px-1 py-1">
+            <button className="text-3xl text-black flex items-center md:hidden  dark:text-white bg-[#ffffff29] rounded px-1 py-1">
               <ion-icon
                 name="menu"
                 onClick={() => setOpenMenu(true)}
@@ -79,7 +79,7 @@ return (
         {/* menu */}
         <div
           className={`fixed top-0 left-0 w-[50%] bg-white min-h-screen  transition-w  ease-in-out  duration-500 md:hidden dark:bg-slate-700  dark:text-white ${
-            openMenu ? "w-full" : "w-0 opacity-0 pointer-events-none"
+            openMenu ? "w-[70%] h-[100vh]" : "w-0 opacity-0 pointer-events-none"
           }`}
         >
           <button className="text-3xl flex items-center absolute top-2 right-2  bg-slate-400 dark:text-white rounded px-1 py-1 text-white ">
