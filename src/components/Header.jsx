@@ -28,12 +28,16 @@ function Header({language, onLanguage}) {
    }
  }, [mode]);
 
- const handleLanguageChange = (e) => {
-  localStorage.setItem("language", e.target.value);
-  onLanguage(e.target.value);
-};
+  // language
+  if (!localStorage.getItem("language")) localStorage.setItem("language", "uz");
+  const [language, setLanguage] = useState(localStorage.getItem("language"));
 
-  return (
+  const handleLanguageChange = (e) => {
+    localStorage.setItem("language", e.target.value);
+    setLanguage(e.target.value);
+  };
+
+return (
     <>
       <header className="py-5">
         <div className="xl:container mx-auto px-10">
@@ -58,44 +62,59 @@ function Header({language, onLanguage}) {
               <button
                 className="pt-2 text-xl"
                 onClick={() => setMode(mode === "light" ? "dark" : "light")}
+
               >
                 <option value="uz">uz</option>
                 <option value="ru">ru</option>
                 <option value="en">en</option>
               </select>
             </div>
-            <button className="text-3xl text-black flex items-center pt-1 md:hidden dark:text-white">
+            <button className="text-3xl text-black flex items-center  md:hidden dark:text-white bg-[#ffffff29] rounded px-1 py-1">
               <ion-icon
-                name={openMenu ? "close" : "menu"}
-                onClick={() => setOpenMenu(!openMenu)}
+                name="menu"
+                onClick={() => setOpenMenu(true)}
               ></ion-icon>
             </button>
           </div>
         </nav>
-        {openMenu && (
-          <div className="fixed top-0 left-0 w-[50%] bg-white min-h-screen backdrop-blur-md">
-            <div>
-              <div className="bg-white py-1 px-2 rounded cursor-pointer dark:bg-transparent ">
-                <select
-                  onChange={handleLanguageChange}
-                  className="bg-transparent w-full outline-none cursor-pointer"
-                  value={language}
-                >
-                  <option value="uz">uz</option>
-                  <option value="ru">ru</option>
-                  <option value="en">en</option>
-                </select>
-              </div>
-              {Links.map((link) => {
-                return (
-                  <Link to={link.to} key={link.id} className="text-black block">
-                    {link.content[language]}
-                  </Link>
-                );
-              })}
+        {/* menu */}
+        <div
+          className={`fixed top-0 left-0 w-[50%] bg-white min-h-screen  transition-w  ease-in-out  duration-500 md:hidden dark:bg-slate-700  dark:text-white ${
+            openMenu ? "w-full" : "w-0 opacity-0 pointer-events-none"
+          }`}
+        >
+          <button className="text-3xl flex items-center absolute top-2 right-2  bg-slate-400 dark:text-white rounded px-1 py-1 text-white ">
+            <ion-icon
+              name="close"
+              onClick={() => setOpenMenu(false)}
+            ></ion-icon>
+          </button>
+          <div>
+            <div className="py-1 px-2 rounded cursor-pointer dark:bg-slate-500 mt-16 max-w-[120px] mx-6 bg-slate-400 text-white ">
+              <select
+                onChange={handleLanguageChange}
+                className="bg-transparent w-full outline-none cursor-pointer"
+                value={language}
+              >
+                <option value="uz">uz</option>
+                <option value="ru">ru</option>
+                <option value="en">en</option>
+              </select>
             </div>
+            {Links.map((link) => {
+              return (
+                <Link
+                  to={link.to}
+                  key={link.id}
+                  className="text-black block dark:text-white px-6 py-4"
+                  onClick={() => setOpenMenu(false)}
+                >
+                  {link.content[language]}
+                </Link>
+              );
+            })}
           </div>
-        )}
+        </div>
       </div>
     </header>
   );
