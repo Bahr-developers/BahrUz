@@ -14,27 +14,23 @@ function Header({language, onLanguage}) {
   const [openMenu, setOpenMenu] = useState(false);
   // mode
  useEffect(() => {
-   switch (mode) {
-     case "dark":
-       element.classList.add("dark");
-       localStorage.setItem("theme", "dark");
-       break;
-     case "light":
-       element.classList.remove("dark");
-       localStorage.setItem("theme", "light");
-       break;
-     default:
-       break;
-   }
+  switch (mode) {
+    case "dark":
+      element.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      break;
+    case "light":
+      element.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      break;
+    default:
+      break;
+  }
  }, [mode]);
-
-  // language
-  if (!localStorage.getItem("language")) localStorage.setItem("language", "uz");
-  const [language, setLanguage] = useState(localStorage.getItem("language"));
 
   const handleLanguageChange = (e) => {
     localStorage.setItem("language", e.target.value);
-    setLanguage(e.target.value);
+    onLanguage(e.target.value);
   };
 
 return (
@@ -62,8 +58,12 @@ return (
               <button
                 className="pt-2 text-xl"
                 onClick={() => setMode(mode === "light" ? "dark" : "light")}
-
               >
+                <ion-icon
+                name={`${mode === "light" ? "sunny" : "moon"}`}
+              ></ion-icon>
+              </button>
+                <select className="dark:bg-transparent">
                 <option value="uz">uz</option>
                 <option value="ru">ru</option>
                 <option value="en">en</option>
@@ -74,8 +74,7 @@ return (
                 name="menu"
                 onClick={() => setOpenMenu(true)}
               ></ion-icon>
-            </button>
-          </div>
+            </button>          
         </nav>
         {/* menu */}
         <div

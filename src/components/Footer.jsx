@@ -2,7 +2,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { Links } from "../utils/links";
 import GoTop from "../assets/top_rows.svg"
-import Instagram from '../assets/instagram.svg'
 function Footer({language}) {
   return (
       <div className="footer dark:bg-transparent mt-[50vh] pt-20">
