@@ -79,22 +79,28 @@ function Header() {
                 <option value="en">en</option>
               </select>
             </div>
-            <button className="text-3xl text-black flex items-center pt-1 md:hidden dark:text-white">
+            <button className="text-3xl text-black flex items-center  md:hidden dark:text-white bg-[#ffffff29] rounded px-1 py-1">
               <ion-icon
-                name={openMenu ? "close" : "menu"}
-                onClick={() => setOpenMenu(!openMenu)}
+                name="menu"
+                onClick={() => setOpenMenu(true)}
               ></ion-icon>
             </button>
           </div>
         </nav>
         {/* menu */}
         <div
-          className={`fixed top-0 left-0 w-[50%] bg-white min-h-screen backdrop-blur-md transition-ml  ease-in-out  duration-500 md:hidden ${
-            openMenu ? "ml-0" : "ml-[-350px]"
+          className={`fixed top-0 left-0 w-[50%] bg-white min-h-screen  transition-w  ease-in-out  duration-500 md:hidden dark:bg-slate-700  dark:text-white ${
+            openMenu ? "w-full" : "w-0 opacity-0 pointer-events-none"
           }`}
         >
+          <button className="text-3xl flex items-center absolute top-2 right-2  bg-slate-400 dark:text-white rounded px-1 py-1 text-white ">
+            <ion-icon
+              name="close"
+              onClick={() => setOpenMenu(false)}
+            ></ion-icon>
+          </button>
           <div>
-            <div className="bg-white py-1 px-2 rounded cursor-pointer dark:bg-slate-500">
+            <div className="py-1 px-2 rounded cursor-pointer dark:bg-slate-500 mt-16 max-w-[120px] mx-6 bg-slate-400 text-white ">
               <select
                 onChange={handleLanguageChange}
                 className="bg-transparent w-full outline-none cursor-pointer"
@@ -107,7 +113,12 @@ function Header() {
             </div>
             {Links.map((link) => {
               return (
-                <Link to={link.to} key={link.id} className="text-black block">
+                <Link
+                  to={link.to}
+                  key={link.id}
+                  className="text-black block dark:text-white px-6 py-4"
+                  onClick={() => setOpenMenu(false)}
+                >
                   {link.content[language]}
                 </Link>
               );
