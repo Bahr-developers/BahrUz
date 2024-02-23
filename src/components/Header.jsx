@@ -32,12 +32,13 @@ function Header() {
 
   // language
   if (!localStorage.getItem("language")) localStorage.setItem("language", "uz");
-  const [language, setlanguage] = useState(localStorage.getItem("language"));
+  const [language, setLanguage] = useState(localStorage.getItem("language"));
 
   const handleLanguageChange = (e) => {
     localStorage.setItem("language", e.target.value);
-    setlanguage(e.target.value);
+    setLanguage(e.target.value);
   };
+
   return (
     <header className="py-5">
       <div className="xl:container mx-auto px-10">
@@ -86,30 +87,33 @@ function Header() {
             </button>
           </div>
         </nav>
-        {openMenu && (
-          <div className="fixed top-0 left-0 w-[50%] bg-white min-h-screen backdrop-blur-md">
-            <div>
-              <div className="bg-white py-1 px-2 rounded cursor-pointer dark:bg-transparent ">
-                <select
-                  onChange={handleLanguageChange}
-                  className="bg-transparent w-full outline-none cursor-pointer"
-                  value={language}
-                >
-                  <option value="uz">uz</option>
-                  <option value="ru">ru</option>
-                  <option value="en">en</option>
-                </select>
-              </div>
-              {Links.map((link) => {
-                return (
-                  <Link to={link.to} key={link.id} className="text-black block">
-                    {link.content[language]}
-                  </Link>
-                );
-              })}
+        {/* menu */}
+        <div
+          className={`fixed top-0 left-0 w-[50%] bg-white min-h-screen backdrop-blur-md transition-ml  ease-in-out  duration-500 md:hidden ${
+            openMenu ? "ml-0" : "ml-[-350px]"
+          }`}
+        >
+          <div>
+            <div className="bg-white py-1 px-2 rounded cursor-pointer dark:bg-slate-500">
+              <select
+                onChange={handleLanguageChange}
+                className="bg-transparent w-full outline-none cursor-pointer"
+                value={language}
+              >
+                <option value="uz">uz</option>
+                <option value="ru">ru</option>
+                <option value="en">en</option>
+              </select>
             </div>
+            {Links.map((link) => {
+              return (
+                <Link to={link.to} key={link.id} className="text-black block">
+                  {link.content[language]}
+                </Link>
+              );
+            })}
           </div>
-        )}
+        </div>
       </div>
     </header>
   );
