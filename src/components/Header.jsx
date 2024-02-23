@@ -46,7 +46,7 @@ function Header() {
           <Link to="/">
             <img className="w-16 rounded-full" src={logo} alt="logo" />
           </Link>
-          <div className="flex items-center gap-10">
+          <div className="flex items-center gap-4 md:gap-10">
             <div className=" items-center gap-6 hidden md:flex">
               {Links.map((link) => {
                 return (
