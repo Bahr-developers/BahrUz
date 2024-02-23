@@ -1,3 +1,4 @@
+
 import { Link, NavLink } from "react-router-dom";
 import { Links } from "../utils/links";
 import GoTop from "../assets/top_rows.svg"
@@ -99,4 +100,4 @@ function Footer({language}) {
   )
 }
 
-export default Footer
+export default Footer;
