@@ -7,7 +7,7 @@ function Footer({language}) {
       <div className="footer dark:bg-transparent mt-[50vh] pt-20">
         <div className="xl:container mx-auto px-10">
           <div className="footer-inner dark:bg-transparent">
-              <div className="join-us flex gap-2 items-center border rounded-xl p-10 py-16">
+              <div className="join-us flex gap-2 items-center border rounded-xl p-10 py-16 md:hidden">
                 <div className="join-us-text w-[60%]">
                   <h2 className="text-[53px] font-black">You can also be among this team :)</h2>
                   <p className="text-[18px] font-medium">Do you want to growth with us? Now prove to us that you need it! Become an integral part of the team</p>
