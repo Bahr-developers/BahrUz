@@ -69,9 +69,9 @@ function Header({language, onLanguage}) {
                   className="bg-transparent w-full outline-none cursor-pointer"
                   value={language}
                 >
-                  <option value="uz">uz</option>
-                  <option value="ru">ru</option>
-                  <option value="en">en</option>
+                  <option className="dark:bg-[#94a3b8]" value="uz">uz</option>
+                  <option className="dark:bg-[#94a3b8]" value="ru">ru</option>
+                  <option className="dark:bg-[#94a3b8]" value="en">en</option>
                 </select>
               </div>
             </div>
