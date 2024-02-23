@@ -12,21 +12,14 @@ import { useState } from "react";
 
 function App() {
 
-  return (
-    <>
-      <main>
-        <Outlet />
-      </main>
   // language
   if (!localStorage.getItem("language")) localStorage.setItem("language", "uz");
   const [language, setLanguage] = useState(localStorage.getItem("language"));
-
-
-
+  
   return (
     <>
     <Routes>
-    <Route path="/" element={<Home language={language} onLanguage={setLanguage} />} />
+        <Route path="/" element={<Home language={language} onLanguage={setLanguage} />} />
         <Route path="about" element={<About />} />
         <Route path="services" element={<Services />} />
         <Route path="portfolio" element={<Portfolio />} />
@@ -34,7 +27,6 @@ function App() {
         <Route path="blog" element={<Blog />} />
         <Route path="*" element={<ErrorPage />} />
     </Routes>
-
     </>
   );
 }
