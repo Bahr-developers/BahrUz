@@ -7,24 +7,19 @@ import Career from "./pages/Career.jsx";
 import Blog from "./pages/Blog.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import { Route, Routes } from "react-router-dom";
-import { useState } from "react";
 
 
 function App() {
 
-  // language
-  if (!localStorage.getItem("language")) localStorage.setItem("language", "uz");
-  const [language, setLanguage] = useState(localStorage.getItem("language"));
-  
   return (
     <>
     <Routes>
-        <Route path="/" element={<Home language={language} onLanguage={setLanguage} />} />
-        <Route path="about" element={<About />} />
-        <Route path="services" element={<Services />} />
-        <Route path="portfolio" element={<Portfolio />} />
-        <Route path="career" element={<Career />} />
-        <Route path="blog" element={<Blog />} />
+        <Route path="/" element={<Home/>} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/career" element={<Career />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="*" element={<ErrorPage />} />
     </Routes>
     </>
