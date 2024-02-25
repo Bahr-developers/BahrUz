@@ -38,58 +38,12 @@ function Footer() {
                 <p className="text-[23px] font-bold">Backend Go programmers.</p>
               </div>
             </div>
-          </div>
-          <div className="footer-nav flex justify-between mt-10">
-            {/* <div className="flex items-center gap-6">
-                  {Links.map((link) => {
-                    return (
-                      <NavLink
-                        key={link.id}
-                        to={link.to}
-                        className="py-1 px-2 hover:bg-slate-400 rounded hover:text-white"
-                      >
-                        <b>{link.content[language]}</b>
-                      </NavLink>
-                    );
-                  })}
-
-                </div> */}
-            <div className="go-top border rounded-full p-3  dark:bg-transparent ml-auto">
+          </div>      
+          <div className="go-top border rounded-full p-3  dark:bg-transparent">
               <Link to="#">
                 <img src={GoTop} alt="top" />
               </Link>
             </div>
-          </div>
-          <div className="joib-own flex items-center gap-4">
-            <span className="block w-10 mt-1 h-[3px] bg-slate-500 rounded-xl dark:bg-white"></span>
-            <p className="text-[23px] font-bold">Flutter - developer</p>
-          </div>
-          <div className="joib-own flex items-center gap-4">
-            <span className="block w-10 mt-1 h-[3px] bg-slate-500 rounded-xl dark:bg-white"></span>
-            <p className="text-[23px] font-bold">Backend Go programmers.</p>
-          </div>
-        </div>
-      </div>
-      <div className="footer-nav flex justify-between mt-10">
-        {/* <div className="flex items-center gap-6">
-          {Links.map((link) => {
-            return (
-              <NavLink
-                key={link.id}
-                to={link.to}
-                className="py-1 px-2 hover:bg-slate-400 rounded hover:text-white"
-              >
-                <b>{link.content[language]}</b>
-              </NavLink>
-            );
-          })}
-        </div> */}
-        <div className="go-top border rounded-full p-3  dark:bg-transparent">
-          <Link to="#">
-            <img src={GoTop} alt="top" />
-          </Link>
-        </div>
-      </div>
       <div className="media-wrap flex gap-20 items-center">
         <div className="soshile-media flex items-center gap-5 mt-10">
           <Link to="/" className="footer">
@@ -191,7 +145,7 @@ function Footer() {
       <p className="tect-[18px] font-bold text-center mb-6">
         © UIC GROUP 2024. All rights reserved.
       </p>
-    </div>
+
   );
 }
 
