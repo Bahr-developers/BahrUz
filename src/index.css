@@ -6,9 +6,6 @@ nav a.active {
   background-color: #94a3b8;
   color: white;
 }
-.footer path {
-  fill:;
-}
 .footer svg:hover path {
   fill: #ffb534;
 }
