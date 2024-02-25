@@ -1,5 +1,3 @@
-
-
 import { Link} from "react-router-dom";
 import GoTop from "../assets/top_rows.svg"
 function Footer() {
@@ -31,47 +29,13 @@ function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="footer-nav flex justify-between mt-10">
-                {/* <div className="flex items-center gap-6">
-                  {Links.map((link) => {
-                    return (
-                      <NavLink
-                        key={link.id}
-                        to={link.to}
-                        className="py-1 px-2 hover:bg-slate-400 rounded hover:text-white"
-                      >
-                        <b>{link.content[language]}</b>
-                      </NavLink>
-                    );
-                  })}
-
-                </div> */}
+              <div className="footer-nav flex justify-between mt-10">                
                 <div className="go-top border rounded-full p-3  dark:bg-transparent ml-auto">
                   <Link to='#'><img src={GoTop} alt="top" /></Link>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="footer-nav flex justify-between mt-10">
-            {/* <div className="flex items-center gap-6">
-              {Links.map((link) => {
-                return (
-                  <NavLink
-                    key={link.id}
-                    to={link.to}
-                    className="py-1 px-2 hover:bg-slate-400 rounded hover:text-white"
-                  >
-                    <b>{link.content[language]}</b>
-                  </NavLink>
-                );
-              })}
-            </div> */}
-            {/* <div className="go-top border rounded-full p-3  dark:bg-transparent">
-              <Link to="#">
-                <img src={GoTop} alt="top" />
-              </Link>
-            </div> */}
-          </div>
+          </div>          
           <div className="media-wrap flex  xl:container px-10 gap-20 items-center">
             <div className="soshile-media  flex items-center gap-5 mt-10">
               <Link to="/" className="footer">
