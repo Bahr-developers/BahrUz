@@ -5,7 +5,12 @@ import logo from "../assets/logo.jpg";
 import { Links } from "../utils/links";
 import { useEffect, useState } from "react";
 
-function Header({language, onLanguage}) {
+function Header() {
+  
+  // language
+  if (!localStorage.getItem("language")) localStorage.setItem("language", "uz");
+  const [language, setLanguage] = useState(localStorage.getItem("language"));
+
   // theme
   const getTheme = localStorage.getItem("theme");
   const [mode, setMode] = useState(getTheme || "light");
@@ -30,7 +35,7 @@ function Header({language, onLanguage}) {
 
   const handleLanguageChange = (e) => {
     localStorage.setItem("language", e.target.value);
-    onLanguage(e.target.value);
+    setLanguage(e.target.value);
   };
 
 return (
@@ -63,7 +68,7 @@ return (
                     name={`${mode === "light" ? "sunny" : "moon"}`}
                   ></ion-icon>
               </button>
-                <select className="dark:bg-transparent">
+                <select className="dark:bg-transparent" onChange={handleLanguageChange}>
                 <option value="uz">uz</option>
                 <option value="ru">ru</option>
                 <option value="en">en</option>
@@ -89,7 +94,7 @@ return (
             ></ion-icon>
           </button>
           <div>
-            <div className="py-1 px-2 rounded cursor-pointer dark:bg-slate-500 mt-16 max-w-[120px] mx-6 bg-slate-400 text-white ">
+            <div className="py-1 px-2 rounded cursor-pointer dark:bg-slate-500 mt-16 max-w-[120px] mx-6 bg-slate-400 text-white">
               <select
                 onChange={handleLanguageChange}
                 className="bg-transparent w-full outline-none cursor-pointer"
