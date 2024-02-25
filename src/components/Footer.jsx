@@ -2,7 +2,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { Links } from "../utils/links";
 import GoTop from "../assets/top_rows.svg"
-function Footer({language}) {
+function Footer() {
   return (
       <div className="footer dark:bg-transparent mt-[50vh] pt-20">
         <div className="xl:container mx-auto px-10">
@@ -40,7 +40,7 @@ function Footer({language}) {
                         to={link.to}
                         className="py-1 px-2 hover:bg-slate-400 rounded hover:text-white"
                       >
-                        <b>{link.content[language]}</b>
+                        {/* <b>{link.content[language]}</b> */}
                       </NavLink>
                     );
                   })}
