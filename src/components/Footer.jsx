@@ -160,7 +160,7 @@ function Footer({ language }) {
           </div>
           <span className="w-[100%] h-[1px] bg-black my-7 block dark:bg-white"></span>
           <p className="tect-[18px] font-bold text-center mb-6">
-            © UIC GROUP 2024. All rights reserved.
+            © BAHR GROUP 2024. All rights reserved.
           </p>
         </div>
       </div>
