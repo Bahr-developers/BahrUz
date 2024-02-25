@@ -32,7 +32,7 @@ function Footer() {
                 </div>
               </div>
               <div className="footer-nav flex justify-between mt-10">
-                <div className="flex items-center gap-6">
+                {/* <div className="flex items-center gap-6">
                   {Links.map((link) => {
                     return (
                       <NavLink
@@ -40,13 +40,13 @@ function Footer() {
                         to={link.to}
                         className="py-1 px-2 hover:bg-slate-400 rounded hover:text-white"
                       >
-                        {/* <b>{link.content[language]}</b> */}
+                        <b>{link.content[language]}</b>
                       </NavLink>
                     );
                   })}
 
-                </div>
-                <div className="go-top border rounded-full p-3  dark:bg-transparent">
+                </div> */}
+                <div className="go-top border rounded-full p-3  dark:bg-transparent ml-auto">
                   <Link to='#'><img src={GoTop} alt="top" /></Link>
                 </div>
               </div>
