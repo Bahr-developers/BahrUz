@@ -49,20 +49,11 @@ function Footer() {
                 <div className="go-top border rounded-full p-3  dark:bg-transparent ml-auto">
                   <Link to='#'><img src={GoTop} alt="top" /></Link>
                 </div>
-
-              </div>
-              <div className="joib-own flex items-center gap-4">
-                <span className="block w-10 mt-1 h-[3px] bg-slate-500 rounded-xl dark:bg-white"></span>
-                <p className="text-[23px] font-bold">Flutter - developer</p>
-              </div>
-              <div className="joib-own flex items-center gap-4">
-                <span className="block w-10 mt-1 h-[3px] bg-slate-500 rounded-xl dark:bg-white"></span>
-                <p className="text-[23px] font-bold">Backend Go programmers.</p>
               </div>
             </div>
           </div>
           <div className="footer-nav flex justify-between mt-10">
-            <div className="flex items-center gap-6">
+            {/* <div className="flex items-center gap-6">
               {Links.map((link) => {
                 return (
                   <NavLink
@@ -74,15 +65,15 @@ function Footer() {
                   </NavLink>
                 );
               })}
-            </div>
-            <div className="go-top border rounded-full p-3  dark:bg-transparent">
+            </div> */}
+            {/* <div className="go-top border rounded-full p-3  dark:bg-transparent">
               <Link to="#">
                 <img src={GoTop} alt="top" />
               </Link>
-            </div>
+            </div> */}
           </div>
-          <div className="media-wrap flex gap-20 items-center">
-            <div className="soshile-media flex items-center gap-5 mt-10">
+          <div className="media-wrap flex  xl:container px-10 gap-20 items-center">
+            <div className="soshile-media  flex items-center gap-5 mt-10">
               <Link to="/" className="footer">
                 <svg
                   className="hover:border hover:rounded-full dark:border dark:rounded-full dark:bg-transparent p-2"
@@ -185,8 +176,6 @@ function Footer() {
             © UIC GROUP 2024. All rights reserved.
           </p>
         </div>
-      </div>
-    </div>
   );
 }
 
