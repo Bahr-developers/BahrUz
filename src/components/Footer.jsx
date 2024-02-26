@@ -1,5 +1,4 @@
 import { Link} from "react-router-dom";
-import GoTop from "../assets/top_rows.svg"
 function Footer() {
 
   const TopGo = () => {
@@ -9,29 +8,29 @@ function Footer() {
 
   return (
       <div className="footer dark:bg-transparent mt-[50vh] pt-20">
-        <div className="xl:container mx-auto px-10">
+        <div className="xl:container mx-auto px-5 md:px-10">
           <div className="footer-inner dark:bg-transparent">
-              <div className="join-us flex sm:hidden md:hidden  gap-2 items-center border rounded-xl p-10 py-16 ">
-                <div className="join-us-text  w-[60%]">
-                  <h2 className="lg:text-[53px] sm:text-[25px] font-black">You can also be among this team :)</h2>
-                  <p className="text-[18px] font-medium">Do you want to growth with us? Now prove to us that you need it! Become an integral part of the team</p>
+              <div className="join-us block md:flex   gap-2 items-center border rounded-xl p-5 md:p-10 py-8 md:py-16 ">
+                <div className="join-us-text  w-[100%] md:w-[60%]">
+                  <h2 className="md:text-[53px] text-[25px] font-black">You can also be among this team :)</h2>
+                  <p className="md:text-[20px] mt-2 text-[15px]  font-medium">Do you want to growth with us? Now prove to us that you need it! Become an integral part of the team</p>
                 </div>
-                <div className="join-us-jobs">
-                  <div className="joib-own flex items-center gap-4">
-                    <span className="block w-10 mt-1 h-[3px] bg-slate-500 rounded-xl dark:bg-white"></span>
-                    <p className="text-[23px] font-bold">Frontend — ReactJS, Javascript</p>
+                <div className="join-us-jobs mt-5 md:mt-0">
+                  <div className="joib-own w-[100%] flex items-center gap-4 mt-2">
+                    <span className="block w-7 md:w-10 mt-[5px]  h-[3px] bg-slate-500 rounded-xl dark:bg-white"></span>
+                    <p className="md:text-[23px] text-[18px] font-bold">Frontend — ReactJS, Javascript</p>
                   </div>
-                  <div className="joib-own flex items-center gap-4">
-                    <span className="block w-10 mt-1 h-[3px] bg-slate-500 rounded-xl dark:bg-white"></span>
-                    <p className="text-[23px] font-bold">Android Application Programmer (Junior, Strong Junior)</p>
+                  <div className="joib-own flex items-center gap-4 mt-2">
+                    <span className="block w-11 md:w-10 mt-[5px] h-[4px] bg-slate-500 rounded-xl dark:bg-white"></span>
+                    <p className="tmd:text-[23px] text-[18px] font-bold">Android Application Programmer (Junior, Strong Junior)</p>
                   </div>
-                  <div className="joib-own flex items-center gap-4">
-                    <span className="block w-10 mt-1 h-[3px] bg-slate-500 rounded-xl dark:bg-white"></span>
-                    <p className="text-[23px] font-bold">Flutter - developer</p>
+                  <div className="joib-own flex items-center gap-4 mt-2">
+                    <span className="block w-7 md:w-10 mt-[5px] h-[3px] bg-slate-500 rounded-xl dark:bg-white"></span>
+                    <p className="md:text-[23px] text-[18px] font-bold">Flutter - developer</p>
                   </div>
-                  <div className="joib-own flex items-center gap-4">
-                    <span className="block w-10 mt-1 h-[3px] bg-slate-500 rounded-xl dark:bg-white"></span>
-                    <p className="text-[23px] font-bold">Backend Go programmers.</p>
+                  <div className="joib-own flex items-center mt-2 gap-4">
+                    <span className="block w-7 md:w-10 mt-[5px] h-[3px] bg-slate-500 rounded-xl dark:bg-white"></span>
+                    <p className="md:text-[23px] text-[18px]  font-bold">Backend Go programmers.</p>
                   </div>
                 </div>
               </div>
@@ -45,8 +44,8 @@ function Footer() {
               </div>
             </div>
           </div>          
-          <div className="media-wrap flex  xl:container px-10 gap-20 items-center">
-            <div className="soshile-media  flex items-center gap-5 mt-10">
+          <div className="media-wrap block md:flex  xl:container px-2 md:px-10 gap-9 md:gap-20 items-center">
+            <div className="soshile-media flex flex-wrap md:flex items-center gap-5 mt-10">
               <Link to="/" className="footer">
                 <svg
                   className="hover:border hover:rounded-full dark:border dark:rounded-full dark:bg-transparent p-2"
@@ -116,7 +115,7 @@ function Footer() {
                 </svg>
               </Link>
             </div>
-            <div className="contact flex gap-12 mt-10">
+            <div className="contact block md:flex gap-12 mt-10">
               <Link to="" className="flex gap-2 hover:text-[#FFB534]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +129,7 @@ function Footer() {
                   bahrdevelopers@gmail.com
                 </p>
               </Link>
-              <Link to="" className="flex gap-2 hover:text-[#FFB534]">
+              <Link to="" className="flex gap-2 hover:text-[#FFB534] mt-5">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="30"
@@ -146,7 +145,7 @@ function Footer() {
           </div>
           <span className="w-[100%] h-[1px] bg-black my-7 block dark:bg-white"></span>
           <p className="tect-[18px] font-bold text-center mb-6">
-            © UIC GROUP 2024. All rights reserved.
+            © BAHR GROUP 2024. All rights reserved.
           </p>
         </div>
   );
