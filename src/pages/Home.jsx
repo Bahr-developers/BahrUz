@@ -8,7 +8,7 @@ function Home() {
           
         </div>
         <Footer/>
-          </>;
+          </>
 }
 
 export default Home;

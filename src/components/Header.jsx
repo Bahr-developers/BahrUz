@@ -48,7 +48,7 @@ function Header() {
                 alt="logo"
               />
             </Link>
-            <div className="flex items-center gap-10">
+            <div className="md:flex hidden items-center gap-10">
               <div className="flex items-center gap-6 ">
                 {Links.map((link) => {
                   return (
@@ -128,10 +128,11 @@ function Header() {
             </div>
           </div>
         </div>
-      </header>
-      <Outlet />
-    </>
-  );
+      </div>
+    </header>
+    <Outlet/>
+   </>
+  )
 }
 
 export default Header;
