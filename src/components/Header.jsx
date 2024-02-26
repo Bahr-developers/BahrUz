@@ -46,7 +46,7 @@ return (
             <Link to="/">
               <img className="w-16 rounded-full shadow-md" src={logo} alt="logo" />
             </Link>
-            <div className="flex items-center gap-10">
+            <div className="md:flex hidden items-center gap-10">
               <div className="flex items-center gap-6 ">
                 {Links.map((link) => {
                   return (

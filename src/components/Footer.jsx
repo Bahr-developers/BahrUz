@@ -11,9 +11,9 @@ function Footer() {
       <div className="footer dark:bg-transparent mt-[50vh] pt-20">
         <div className="xl:container mx-auto px-10">
           <div className="footer-inner dark:bg-transparent">
-              <div className="join-us flex gap-2 items-center border rounded-xl p-10 py-16 ">
-                <div className="join-us-text w-[60%]">
-                  <h2 className="text-[53px] font-black">You can also be among this team :)</h2>
+              <div className="join-us flex sm:hidden md:hidden  gap-2 items-center border rounded-xl p-10 py-16 ">
+                <div className="join-us-text  w-[60%]">
+                  <h2 className="lg:text-[53px] sm:text-[25px] font-black">You can also be among this team :)</h2>
                   <p className="text-[18px] font-medium">Do you want to growth with us? Now prove to us that you need it! Become an integral part of the team</p>
                 </div>
                 <div className="join-us-jobs">
@@ -38,7 +38,7 @@ function Footer() {
               <div className="footer-nav flex justify-between mt-10">                
                 <button onClick={TopGo} className="go-top border rounded-full p-3  dark:bg-transparent ml-auto">
                   <Link to='#'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" viewBox="0 0 24 24"><path d="M11 8.414V18h2V8.414l4.293 4.293 1.414-1.414L12 4.586l-6.707 6.707 1.414 1.414z"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" viewBox="0 0 24 24"><path d="M11 8.414V18h2V8.414l4.293 4.293 1.414-1.414L12 4.586l-6.707 6.707 1.414 1.414z"></path>
                     </svg>
                     </Link>
                 </button>
