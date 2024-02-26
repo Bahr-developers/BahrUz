@@ -1,4 +1,5 @@
 import { Link} from "react-router-dom";
+
 function Footer() {
 
   const TopGo = () => {
@@ -147,7 +148,8 @@ function Footer() {
           <p className="tect-[18px] font-bold text-center mb-6">
             © BAHR GROUP 2024. All rights reserved.
           </p>
-        </div>
+</div>
+
   );
 }
 

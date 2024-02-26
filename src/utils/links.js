@@ -1,47 +1,47 @@
-export  const Links = [
-    {
-      id: 1,
-      content: {
-        uz: "Biz haqimizda",
-        ru: "О нас",
-        en: "About",
-      },
-      to: "/about",
+export const Links = [
+  {
+    id: 1,
+    content: {
+      uz: "Biz haqimizda",
+      ru: "О нас",
+      en: "About",
     },
-    {
-      id: 2,
-      content: {
-        uz: "Xizmatlar",
-        ru: "Услуги",
-        en: "Services",
-      },
-      to: "/services",
+    to: "/about",
+  },
+  {
+    id: 2,
+    content: {
+      uz: "Xizmatlar",
+      ru: "Услуги",
+      en: "Services",
     },
-    {
-      id: 3,
-      content: {
-        uz: "Portfolio",
-        ru: "портфолио",
-        en: "Portfolio",
-      },
-      to: "/portfolio",
+    to: "/services",
+  },
+  {
+    id: 3,
+    content: {
+      uz: "Portfolio",
+      ru: "портфолио",
+      en: "Portfolio",
     },
-    {
-      id: 4,
-      content: {
-        uz: "Karyera",
-        ru: "Карьера",
-        en: "Career",
-      },
-      to: "/career",
+    to: "/portfolio",
+  },
+  {
+    id: 4,
+    content: {
+      uz: "Karyera",
+      ru: "Карьера",
+      en: "Career",
     },
-    {
-      id: 5,
-      content: {
-        uz: "Blog",
-        ru: "Блог",
-        en: "Blog",
-      },
-      to: "/blog",
+    to: "/career",
+  },
+  {
+    id: 5,
+    content: {
+      uz: "Blog",
+      ru: "Блог",
+      en: "Blog",
     },
-  ];
+    to: "/blog",
+  },
+];
