@@ -121,7 +121,6 @@ return (
         </div>
       </div>
     </header>
-  );
     <Outlet/>
    </>
   )

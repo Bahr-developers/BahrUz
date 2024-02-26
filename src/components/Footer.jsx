@@ -1,6 +1,12 @@
 import { Link} from "react-router-dom";
 import GoTop from "../assets/top_rows.svg"
 function Footer() {
+
+  const TopGo = () => {
+    document.body.scrollTop=0
+    document.documentElement.scrollTop=0
+  }
+
   return (
       <div className="footer dark:bg-transparent mt-[50vh] pt-20">
         <div className="xl:container mx-auto px-10">
@@ -30,9 +36,12 @@ function Footer() {
                 </div>
               </div>
               <div className="footer-nav flex justify-between mt-10">                
-                <div className="go-top border rounded-full p-3  dark:bg-transparent ml-auto">
-                  <Link to='#'><img src={GoTop} alt="top" /></Link>
-                </div>
+                <button onClick={TopGo} className="go-top border rounded-full p-3  dark:bg-transparent ml-auto">
+                  <Link to='#'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" viewBox="0 0 24 24"><path d="M11 8.414V18h2V8.414l4.293 4.293 1.414-1.414L12 4.586l-6.707 6.707 1.414 1.414z"></path>
+                    </svg>
+                    </Link>
+                </button>
               </div>
             </div>
           </div>          
