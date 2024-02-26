@@ -38,7 +38,7 @@ function Header() {
 
   return (
     <>
-      <header className="py-5">
+      <header className="py-5" id="header">
         <div className="xl:container mx-auto px-10">
           <nav className="flex items-center justify-between">
             <Link to="/">
@@ -128,11 +128,10 @@ function Header() {
             </div>
           </div>
         </div>
-      </div>
-    </header>
-    <Outlet/>
-   </>
-  )
+      </header>
+      <Outlet />
+    </>
+  );
 }
 
 export default Header;

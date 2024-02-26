@@ -9,8 +9,14 @@ nav a.active {
 
 .footer svg:hover path {
   fill: #ffb534;
-
+}
 .footer path{
   fill: #94a3b8;
-
+}
+.partner-overley:hover{
+  position: absolute;
+  display: block;
+  background: rgba(255, 255, 255, 0.018);
+  z-index: 1;
+  cursor: pointer;
 }
