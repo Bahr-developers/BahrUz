@@ -39,7 +39,7 @@ function Header() {
   return (
     <>
       <header className="py-5" id="header">
-        <div className="xl:container mx-auto px-10">
+        <div className="xl:container mx-auto px-5 md:px-10">
           <nav className="flex items-center justify-between">
             <Link to="/">
               <img
