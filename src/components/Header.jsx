@@ -89,7 +89,7 @@ function Header() {
           </nav>
           {/* menu */}
           <div
-            className={`fixed top-0 left-0 w-[50%] bg-white min-h-screen  transition-w  ease-in-out  duration-500 md:hidden dark:bg-slate-700  dark:text-white ${
+            className={`fixed top-0 z-20 left-0 w-[50%] bg-white min-h-screen  transition-w  ease-in-out  duration-500 md:hidden dark:bg-slate-700  dark:text-white ${
               openMenu
                 ? "w-[70%] h-[100vh]"
                 : "w-0 opacity-0 pointer-events-none"
