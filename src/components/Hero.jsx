@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Hero() {
   return (
-    <div className="container mx-auto my-32 px-5 md:px-10">
+    <div className="container mx-auto my-32">
       <div>
         <h1 className="text-5xl mb-8 dark:text-white text-left md:text-center">
           Modern Developers
