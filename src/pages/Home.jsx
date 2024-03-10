@@ -5,12 +5,12 @@ import Services from "../components/Services";
 
 function Home() {
   return <>
-        <Header/>
-        <div className="xl:container mx-auto px-5 md:px-10 mx-auto">
-          <Partner/>
-          <Services/>
-        </div>
-        <Footer/>
+            <Header/>
+            <div className="xl:container px-5 md:px-10 mx-auto">
+              <Partner/>
+              <Services/>
+            </div>
+            <Footer/>
           </>
 }
 
