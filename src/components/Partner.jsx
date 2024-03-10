@@ -6,7 +6,7 @@ function Partner() {
       <div className="partner-inner">
         <div className="partner-inner">
           <h2 className="text-[35px] font-bold">Hamkorlarimiz</h2>
-          <div className="partner-cart-wrap mx-auto flex-wrap flex gap-2 mt-10">
+          <div className="partner-cart-wrap  flex mx-auto md:flex-wrap gap-2 mt-10">
             <PartnerCart />
             <PartnerCart />
             <PartnerCart />

@@ -2,7 +2,7 @@ import PartnerLogo from "../assets/partner.jpg";
 
 function PartnerCart() {
   return (
-    <div className="partner-cart w-[150px] relative">
+    <div className="partner-cart w-[130px] md:w-[150px] relative">
       <img
         width={150}
         className="cursor-pointer rounded"

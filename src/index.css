@@ -19,3 +19,17 @@ nav a.active {
   z-index: 1;
   cursor: pointer;
 }
+
+
+@media (max-width: 556px) {
+  .partner-cart-wrap{
+    display: grid;
+    grid-template-rows: repeat(2, 130px);
+    grid-auto-flow: column;
+    gap: 10px;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+}
