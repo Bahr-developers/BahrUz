@@ -6,14 +6,13 @@ nav a.active {
   background-color: #94a3b8;
   color: white;
 }
-
 .footer svg:hover path {
   fill: #ffb534;
 }
-.footer path{
+.footer path {
   fill: #94a3b8;
 }
-.partner-overley:hover{
+.partner-overley:hover {
   position: absolute;
   display: block;
   background: rgba(255, 255, 255, 0.018);

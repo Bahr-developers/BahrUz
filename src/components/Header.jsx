@@ -39,7 +39,7 @@ function Header() {
   return (
     <>
       <header className="py-5" id="header">
-        <div className="xl:container mx-auto px-5 md:px-10">
+        <div className="container mx-auto">
           <nav className="flex items-center justify-between">
             <Link to="/">
               <img
@@ -48,8 +48,8 @@ function Header() {
                 alt="logo"
               />
             </Link>
-            <div className="md:flex hidden items-center gap-10">
-              <div className="flex items-center gap-6 ">
+            <div className="md:flex hidden items-center gap-5 md:gap-10">
+              <div className="flex items-center gap-2 lg:gap-6 ">
                 {Links.map((link) => {
                   return (
                     <NavLink
@@ -89,7 +89,7 @@ function Header() {
           </nav>
           {/* menu */}
           <div
-            className={`fixed top-0 left-0 w-[50%] bg-white min-h-screen  transition-w  ease-in-out  duration-500 md:hidden dark:bg-slate-700  dark:text-white ${
+            className={`fixed top-0 z-20 left-0 w-[50%] bg-white min-h-screen  transition-w  ease-in-out  duration-500 md:hidden dark:bg-slate-700  dark:text-white ${
               openMenu
                 ? "w-[70%] h-[100vh]"
                 : "w-0 opacity-0 pointer-events-none"
