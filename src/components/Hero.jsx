@@ -1,11 +1,21 @@
 import { Link } from "react-router-dom";
 
+import { useTypewriter, Cursor } from "react-simple-typewriter";
+
 function Hero() {
+  const [text] = useTypewriter({
+    words: ["Modern Developers", "Modern Developers", "Modern Developers"],
+    loop: true,
+    deleteSpeed: 50,
+    typeSpeed: 100,
+  });
+
   return (
     <div className="container mx-auto my-32">
       <div>
         <h1 className="text-5xl mb-8 dark:text-white text-left md:text-center">
-          Modern Developers
+          {text}
+          <Cursor />
         </h1>
         <p className="max-w-[500px] w-full text-left md:text-center md:mx-auto mb-8 dark:text-white md:text-xl">
           Bizning jamoamiz bu sohada professionallardir saytlar va mobil

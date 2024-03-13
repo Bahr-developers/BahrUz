@@ -1,20 +1,27 @@
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 const About = () => {
   return (
     <div className="mb-32 flex flex-col xl:flex-row gap-y-6 xl:gap-y-0 gap-10">
       <div>
         <div className="flex  gap-4 md:gap-8 justify-center xl:justify-start">
           <div className="w-[300px] h-[400px] overflow-hidden rounded-sm">
-            <img
+            <LazyLoadImage
+              effect="blur"
               src="https://picsum.photos/300/400"
               alt="photo"
               className="hover:scale-125 hover:rotate-[5deg] duration-200 w-full h-full"
+              height={400}
             />
           </div>
           <div className="w-[300px] h-[400px] overflow-hidden rounded-sm">
-            <img
+            <LazyLoadImage
+              effect="blur"
               src="https://picsum.photos/300/400"
               alt="photo"
               className="hover:scale-125 hover:rotate-[5deg] duration-200 w-full h-full"
+              height={400}
             />
           </div>
         </div>
