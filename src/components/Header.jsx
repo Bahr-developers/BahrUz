@@ -58,7 +58,7 @@ function Header() {
     <>
       <header
         className={
-          `py-5 w-screen  top-0  left-0 px-3 md:px-10 ${
+          `py-5 w-full  top-0  left-0 px-3 md:px-10 ${
             location.pathname === "/" ? "fixed" : "sticky"
           }` +
           " " +
