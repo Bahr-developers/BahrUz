@@ -12,7 +12,9 @@ nav a.active {
 .footer path {
   fill: #94a3b8;
 }
-
+body::-webkit-scrollbar{
+  display: none;
+}
 .hero__bg {
   background-image: url("../public/bgHero.gif");
   background-size: 100vw 100vh;
@@ -24,9 +26,9 @@ nav a.active {
 @media (max-width: 556px) {
   .partner-cart-wrap{
     display: grid;
-    grid-template-rows: repeat(2, 130px);
-    grid-auto-flow: column;
+    grid-template-rows: repeat(2, 150px);
     gap: 10px;
+    grid-auto-flow: column;
     overflow-y: auto;
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;

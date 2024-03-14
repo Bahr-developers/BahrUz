@@ -11,14 +11,12 @@ function Home() {
   return (
     <>
       <Header/>
-      <div className="xl:container px-10 mx-auto">
         <Hero />
         <About />
         <Partfolio/>
         <Partner />
         <Services />
-        <Careers />  
-      </div>
+        <Careers />        
       <Footer/>
     </>
   );

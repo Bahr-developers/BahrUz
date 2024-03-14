@@ -2,7 +2,7 @@ import ParfolioCard from "./ParfolioCard";
 
 const Partfolio = () => {
     return (
-        <div className="mb-64 partfolio">
+        <div className="xl:container px-3 md:px-10  mb-64 partfolio">
             <div className="partfolia-head md:flex justify-between items-center">
                 <h1 className="font-bold text-[45px]">Partfolio</h1>
                 <div className="partfolio-sort flex justify-between gap-1 md:gap-3 mt-2">

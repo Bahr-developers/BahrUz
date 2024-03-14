@@ -17,8 +17,8 @@ function Hero() {
   const language = localStorage.getItem("language");
 
   return (
-    <div className="h-screen w-screen flex items-center justify-center hero__bg">
-      <div className="container mx-auto  px-3 md:px-5">
+    <div className="h-screen w-screen flex items-center px-3 md:px-10  justify-center hero__bg">
+      {/* <div className="mx-auto px-3 md:px-5"> */}
         <div>
           <h1 className="text-5xl sm:text-7xl mb-12 dark:text-white text-left md:text-center">
             {text}
@@ -48,7 +48,7 @@ function Hero() {
             </Link>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </div>
   );
 }

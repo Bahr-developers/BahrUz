@@ -22,7 +22,7 @@ const Careers = () => {
   };
   return (
     <div>
-      <div className="container mx-auto px-3 md:px-5">
+      <div className="xl:container mx-auto px-3 md:px-10">
         <div className="footer-inner dark:bg-transparent">
           <div className="join-us block md:flex   gap-2 items-center border rounded-xl p-5 md:p-10 py-8 md:py-10 ">
             <div className="join-us-text  w-[100%] md:w-[60%]">
