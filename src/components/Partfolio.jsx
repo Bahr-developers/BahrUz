@@ -12,8 +12,11 @@ const Partfolio = () => {
                     <button className="btn border p-1 md:px-3 rounded-md dark:bg-transparent hover:text-[#0D9276] hover:border-[#0D9276]">Website</button>
                 </div>
             </div>
-            <div className="partfolio-content mt-4">
-                <ParfolioCard width={150}/>
+            <div className="partfolio-content w-[100%]">
+                <ParfolioCard/>
+                <ParfolioCard/>
+                <ParfolioCard/>
+                <ParfolioCard/>
             </div>
         </div>
     );
