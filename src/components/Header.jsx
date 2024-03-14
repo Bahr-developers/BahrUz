@@ -1,8 +1,12 @@
+
 import { NavLink, Link, Outlet } from "react-router-dom";
+
 import logo from "../assets/logo.jpg";
 // Links
 import { Links } from "../utils/links";
 import { useEffect, useState } from "react";
+
+function Header({ language, onLanguage }) {
 
 function Header() {
   // language
@@ -32,13 +36,41 @@ function Header() {
   }, [mode]);
 
   const handleLanguageChange = (e) => {
+
     localStorage.setItem("language", e.target.value);
     setLanguage(e.target.value);
   };
 
+  const [sticky, setSticky] = useState("");
+
+  useEffect(() => {
+    window.addEventListener("scroll", isSticky);
+    return () => {
+      window.removeEventListener("scroll", isSticky);
+    };
+  }, []);
+
+  const isSticky = () => {
+    const scrollTop = window.scrollY;
+    const stickyClass =
+      scrollTop >= 50 ? "shadow-md backdrop-blur-[20px] z-10" : "";
+    setSticky(stickyClass);
+  };
+
+  const location = useLocation();
+
   return (
     <>
-      <header className="py-5" id="header">
+      <header
+        className={
+          `py-5 w-screen  top-0  left-0 px-3 md:px-10 ${
+            location.pathname === "/" ? "fixed" : "sticky"
+          }` +
+          " " +
+          sticky
+        }
+        id="header"
+      >
         <div className="container mx-auto">
           <nav className="flex items-center justify-between">
             <Link to="/">
@@ -70,11 +102,13 @@ function Header() {
                   name={`${mode === "light" ? "sunny" : "moon"}`}
                 ></ion-icon>
               </button>
+
               <select
                 value={language}
                 className="dark:bg-transparent"
                 onChange={handleLanguageChange}
               >
+
                 <option value="uz">uz</option>
                 <option value="ru">ru</option>
                 <option value="en">en</option>
@@ -90,6 +124,7 @@ function Header() {
           {/* menu */}
           <div
             className={`fixed top-0 z-20 left-0 w-[50%] bg-white min-h-screen  transition-w  ease-in-out  duration-500 md:hidden dark:bg-slate-700  dark:text-white ${
+
               openMenu
                 ? "w-[70%] h-[100vh]"
                 : "w-0 opacity-0 pointer-events-none"
@@ -129,6 +164,8 @@ function Header() {
           </div>
         </div>
       </header>
+      );
+
       <Outlet />
     </>
   );

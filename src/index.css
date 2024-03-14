@@ -12,12 +12,12 @@ nav a.active {
 .footer path {
   fill: #94a3b8;
 }
-.partner-overley:hover {
-  position: absolute;
-  display: block;
-  background: rgba(255, 255, 255, 0.018);
-  z-index: 1;
-  cursor: pointer;
+
+.hero__bg {
+  background-image: url("../public/bgHero.gif");
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 

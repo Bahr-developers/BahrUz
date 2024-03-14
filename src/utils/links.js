@@ -1,3 +1,4 @@
+// Links
 export const Links = [
   {
     id: 1,
@@ -45,3 +46,9 @@ export const Links = [
     to: "/blog",
   },
 ];
+
+export const HeroTitle = {
+  uz: "Bizning jamoamiz bu sohada professionallardir saytlar va mobil ilovalarni ishlab chiqish, saytlar, ijtimoiy tarmoqlar va video taqdimotlarni ilgari surish. o'z ishini sevadiganlar!",
+  ru: "Наша команда — профессионалы в области разработки сайтов и мобильных приложений, продвижения сайтов, социальных сетей и видеопрезентаций. те, кто любит свою работу!",
+  en: "Our team are professionals in the field of development of sites and mobile applications, promotion of sites, social networks and video presentations. those who love their work!",
+};
