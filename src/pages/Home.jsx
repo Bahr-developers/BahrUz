@@ -1,4 +1,5 @@
 import About from "../components/About";
+import Careers from "../components/Careers";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
@@ -8,13 +9,12 @@ import Services from "../components/Services";
 function Home() {
   return (
     <>
-      <div className="container mx-auto px-5 md:px-10">
-        <Header />
-        <Hero />
-        <About />
-        <Partner />
-        <Services />
-      </div>
+      <Header />
+      <Hero />
+      <About />
+      <Partner />
+      <Services />
+      <Careers />
       <Footer />
     </>
   );
