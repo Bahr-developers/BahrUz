@@ -27,6 +27,7 @@ function App() {
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="career" element={<Career />} />
         <Route path="blog" element={<Blog />} />
+        <Route path="partfolio" element={<Blog/>}/>
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
