@@ -2,7 +2,7 @@ import PartnerCart from "./PartnerCart";
 
 function Partner() {
   return (
-    <div className="partner  mb-32">
+    <div className="partner mb-32">
       <div className="partner-inner">
         <div className="partner-inner">
           <h2 className="text-[35px] font-bold">Hamkorlarimiz</h2>
