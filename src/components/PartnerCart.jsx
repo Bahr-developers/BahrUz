@@ -3,16 +3,15 @@ import PartnerLogo from "../assets/partner.jpg";
 
 function PartnerCart() {
   return (
-    <div className="partner-cart w-[150px] relative">
+    <div className="partner-cart w-[150px] relative grayscale hover:grayscale-0 duration-200">
       <LazyLoadImage
         effect="blur"
         width={150}
         className="cursor-pointer rounded"
         src={PartnerLogo}
-        alt=""
-        height={150}
+        alt="img"
+        height={145}
       />
-      <span className="partner-overley block absolute top-0 left-0 bg-[#7574729d] w-[100%] h-[100%] rounded"></span>
     </div>
   );
 }

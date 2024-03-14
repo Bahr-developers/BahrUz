@@ -1,4 +1,4 @@
-import { NavLink, Link, Outlet } from "react-router-dom";
+import { NavLink, Link, Outlet, useLocation } from "react-router-dom";
 import logo from "../assets/logo.jpg";
 // Links
 import { Links } from "../utils/links";
@@ -36,9 +36,36 @@ function Header() {
     setLanguage(e.target.value);
   };
 
+  const [sticky, setSticky] = useState("");
+
+  useEffect(() => {
+    window.addEventListener("scroll", isSticky);
+    return () => {
+      window.removeEventListener("scroll", isSticky);
+    };
+  }, []);
+
+  const isSticky = () => {
+    const scrollTop = window.scrollY;
+    const stickyClass =
+      scrollTop >= 50 ? "shadow-md backdrop-blur-[20px] z-10" : "";
+    setSticky(stickyClass);
+  };
+
+  const location = useLocation();
+
   return (
     <>
-      <header className="py-5" id="header">
+      <header
+        className={
+          `py-5 w-screen  top-0  left-0 px-3 md:px-10 ${
+            location.pathname === "/" ? "fixed" : "sticky"
+          }` +
+          " " +
+          sticky
+        }
+        id="header"
+      >
         <div className="container mx-auto">
           <nav className="flex items-center justify-between">
             <Link to="/">
