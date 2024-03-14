@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Img from '../assets/partner.jpg'
 
-const ParfolioCard = ({width = '150'}) => {
+const ParfolioCard = () => {
     return (
         <Link to='/partfolio'>
             <div className="carts-part relative">

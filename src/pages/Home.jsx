@@ -10,7 +10,7 @@ import Services from "../components/Services";
 function Home() {
   return (
     <>
-      <Header language={language} onLanguage={onLanguage} />
+      <Header/>
       <div className="xl:container px-10 mx-auto">
         <Hero />
         <About />
@@ -19,7 +19,7 @@ function Home() {
         <Services />
         <Careers />  
       </div>
-      <Footer language={language} />
+      <Footer/>
     </>
   );
 }
