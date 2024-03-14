@@ -6,9 +6,16 @@ nav a.active {
   background-color: #94a3b8;
   color: white;
 }
-.footer path{
-  fill: ;
+.footer svg:hover path {
+  fill: #ffb534;
 }
-.footer svg:hover path{
-  fill: #FFB534;
+.footer path {
+  fill: #94a3b8;
+}
+
+.hero__bg {
+  background-image: url("../public/bgHero.gif");
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
 }

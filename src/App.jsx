@@ -7,6 +7,7 @@ import Career from "./pages/Career.jsx";
 import Blog from "./pages/Blog.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import { Route, Routes } from "react-router-dom";
+
 import { useState } from "react";
 
 function App() {
