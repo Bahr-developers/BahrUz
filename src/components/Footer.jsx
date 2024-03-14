@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer>
-      <div className="footer dark:bg-transparent px-5 md:px-3">
+      <div className="footer dark:bg-transparent container px-5 md:px-3">
         <div className="media-wrap mx-auto block md:flex  container px-2 md:px-10 gap-20 md:gap-20 items-center">
           <div className="soshile-media w-[80%] md:mx-auto text-center flex flex-wrap md:flex items-center gap-5 mt-10">
             <Link to="/" className="footer">
