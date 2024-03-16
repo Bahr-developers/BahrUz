@@ -26,9 +26,19 @@ body::-webkit-scrollbar{
   overflow: hidden;       
   margin-top: 0;
   transition: 500ms ease-in-out;
-  /* transform: translateX(80px); */
   display: block;
   z-index: 1;
+}
+.overley{
+  display: none;
+}
+
+.parfolio-wrap:hover .overley{
+  display: block;
+  background: #44a08db3;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2362636f, #3a9f8abd);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0936377b, #44a08dbd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .hero__bg {
