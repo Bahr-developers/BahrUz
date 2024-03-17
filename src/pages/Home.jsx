@@ -8,6 +8,7 @@ import Partner from "../components/Partner";
 import Services from "../components/Services";
 
 function Home() {
+
   return (
     <>
       <Header/>

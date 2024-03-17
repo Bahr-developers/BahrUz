@@ -34,7 +34,6 @@ function Header() {
   }, [mode]);
 
   const handleLanguageChange = (e) => {
-
     localStorage.setItem("language", e.target.value);
     setLanguage(e.target.value);
   };
