@@ -1,10 +1,10 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
-function Services() {
+function Services({ language, setLanguage }) {
   return (
     <>
-      <Header />
+      <Header language={language} setLanguage={setLanguage} />
       <div className="xl:container px-10 mx-auto">Services</div>
       <Footer />
     </>
