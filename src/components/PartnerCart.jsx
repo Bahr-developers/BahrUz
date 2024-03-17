@@ -1,10 +1,10 @@
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import PartnerLogo from "../assets/partner.jpg";
 
 function PartnerCart() {
   return (
     <div className="partner-cart w-[150px] relative grayscale hover:grayscale-0 duration-200">
-      <img
+      <LazyLoadImage
         width={150}
         className="cursor-pointer rounded"
         src={PartnerLogo}
