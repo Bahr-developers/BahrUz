@@ -2,7 +2,7 @@ import ServicesCart from "./ServicesCart";
 
 const Services = () => {
   return (
-    <div className="container mx-auto px-3 md:px-10 mb-24">
+    <div className="xl:container mx-auto px-3 md:px-10 mb-24">
       <div className="services-wrap">
         <div className="services-head flex items-center gap-4">
           <h3 className=" text-sky-500 text-[22px] font-bold">Bizning</h3>
