@@ -5,7 +5,7 @@ function Career() {
   return (
     <>
       <Header />
-      <div className="xl:container px-10 mx-auto">Career</div>
+      <div className="xl:container px-10 mx-auto">Careekr</div>
       <Footer />
     </>
   );
