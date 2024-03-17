@@ -2,15 +2,13 @@ import { Link } from "react-router-dom";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { HeroTitle } from "../utils/links";
 
-function Hero() {
+function Hero({ language }) {
   const [text] = useTypewriter({
     words: ["Norm Developers", "Simple Developers", "Modern Developers"],
     loop: true,
     deleteSpeed: 50,
     typeSpeed: 100,
   });
-
-  const language = localStorage.getItem("language");
 
   return (
     <div className="h-screen w-screen flex items-center px-3 md:px-10  justify-center hero__bg">

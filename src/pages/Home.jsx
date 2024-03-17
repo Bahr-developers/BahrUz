@@ -7,17 +7,17 @@ import Partfolio from "../components/Partfolio";
 import Partner from "../components/Partner";
 import Services from "../components/Services";
 
-function Home() {
+function Home({ language, setLanguage }) {
   return (
     <>
-      <Header/>
-        <Hero />
-        <About />
-        <Partfolio/>
-        <Partner />
-        <Services />
-        <Careers />        
-      <Footer/>
+      <Header language={language} setLanguage={setLanguage} />
+      <Hero language={language} />
+      <About language={language} />
+      <Partfolio />
+      <Partner />
+      <Services />
+      <Careers />
+      <Footer />
     </>
   );
 }
