@@ -8,12 +8,17 @@ import Blog from "./pages/Blog.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import { Route, Routes } from "react-router-dom";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   // language
   if (!localStorage.getItem("language")) localStorage.setItem("language", "uz");
   const [language, setLanguage] = useState(localStorage.getItem("language"));
+
+  console.log();
+  useEffect(()=>{
+    
+  },[language])
 
   return (
     <div>
@@ -25,7 +30,7 @@ function App() {
         <Route path="about" element={<About />} />
         <Route path="services" element={<Services />} />
         <Route path="portfolio" element={<Portfolio />} />
-        <Route path="career" element={<Career />} />
+        <Route path="career" element={<Career  />} />
         <Route path="blog" element={<Blog />} />
         <Route path="portfolio" element={<Blog />} />
         <Route path="*" element={<ErrorPage />} />

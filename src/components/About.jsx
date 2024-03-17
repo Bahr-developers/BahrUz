@@ -2,6 +2,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { AboutTitle } from "../utils/links";
 
+
 const About = ({ language }) => {
   return (
     <div className="xl:container mx-auto px-3 md:px-10  mt-24">

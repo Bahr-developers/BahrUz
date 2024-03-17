@@ -10,6 +10,7 @@ function Hero({ language }) {
     typeSpeed: 100,
   });
 
+
   return (
     <div className="h-screen w-screen flex items-center px-3 md:px-10  justify-center hero__bg">
       <div>
