@@ -1,4 +1,4 @@
-import { LazyLoadImage } from "react-lazy-load-image-component";
+
 import PartnerLogo from "../assets/partner.jpg";
 
 function PartnerCart() {

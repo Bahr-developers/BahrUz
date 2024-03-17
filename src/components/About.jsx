@@ -3,7 +3,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 const About = () => {
   return (
-    <div className="container mx-auto px-3 md:px-5 mt-24">
+    <div className="xl:container mx-auto px-3 md:px-10  mt-24">
       <div className="mb-32 flex flex-col xl:flex-row gap-y-10 xl:gap-y-0 gap-10">
         <div>
           <div className="flex  gap-4 md:gap-8 justify-start">

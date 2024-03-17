@@ -1,12 +1,10 @@
 
-import { NavLink, Link, Outlet } from "react-router-dom";
+import { NavLink, Link, Outlet, useLocation } from "react-router-dom";
 
 import logo from "../assets/logo.jpg";
 // Links
 import { Links } from "../utils/links";
 import { useEffect, useState } from "react";
-
-function Header({ language, onLanguage }) {
 
 function Header() {
   // language
@@ -164,11 +162,8 @@ function Header() {
           </div>
         </div>
       </header>
-      );
-
       <Outlet />
     </>
   );
 }
-
-export default Header;
+export default Header

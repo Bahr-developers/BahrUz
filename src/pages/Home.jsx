@@ -10,16 +10,14 @@ import Services from "../components/Services";
 function Home() {
   return (
     <>
-      <Header language={language} onLanguage={onLanguage} />
-      <div className="xl:container px-10 mx-auto">
+      <Header/>
         <Hero />
         <About />
         <Partfolio/>
         <Partner />
         <Services />
-        <Careers />  
-      </div>
-      <Footer language={language} />
+        <Careers />        
+      <Footer/>
     </>
   );
 }

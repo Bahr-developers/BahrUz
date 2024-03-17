@@ -16,7 +16,7 @@ function App() {
   const [language, setLanguage] = useState(localStorage.getItem("language"));
 
   return (
-    <>
+    <div>
       <Routes>
         <Route
           path="/"
@@ -27,9 +27,10 @@ function App() {
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="career" element={<Career />} />
         <Route path="blog" element={<Blog />} />
+        <Route path="portfolio" element={<Blog/>}/>
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-    </>
+    </div>
   );
 }
 
