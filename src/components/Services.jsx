@@ -14,14 +14,14 @@ const Services = () => {
           Xizmatlarimiz
         </h3>
         <div className="card-wrap mt-5 md:flex md:flex-wrap md:gap-5">
-        <div className="card-wrap mt-5 grid md:grid-cols-2 gap-3 justify-between ">
-
-          <ServicesCart />
-          <ServicesCart />
-          <ServicesCart />
-          <ServicesCart />
-          <ServicesCart />
-          <ServicesCart />
+          <div className="card-wrap mt-5 grid md:grid-cols-2 gap-3 justify-between ">
+            <ServicesCart />
+            <ServicesCart />
+            <ServicesCart />
+            <ServicesCart />
+            <ServicesCart />
+            <ServicesCart />
+          </div>
         </div>
       </div>
     </div>
