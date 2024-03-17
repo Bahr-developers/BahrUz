@@ -15,9 +15,9 @@ function Partner() {
               <PartnerCart />
               <PartnerCart />
             </div>
-          </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
