@@ -9,7 +9,7 @@ const Services = () => {
           <span className="block w-8 h-[1px] mt-1  bg-sky-500"></span>
         </div>
         <h3 className="text-[35px] font-black">Xizmatlarimiz</h3>
-        <div className="card-wrap mt-5 md:flex md:flex-wrap md:gap-5">
+        <div className="card-wrap mt-5 grid md:grid-cols-2 gap-3 justify-between ">
           <ServicesCart />
           <ServicesCart />
           <ServicesCart />
