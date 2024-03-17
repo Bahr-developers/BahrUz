@@ -5,11 +5,7 @@ import logo from "../assets/logo.jpg";
 import { Links } from "../utils/links";
 import { useEffect, useState } from "react";
 
-function Header() {
-  // language
-  if (!localStorage.getItem("language")) localStorage.setItem("language", "uz");
-  const [language, setLanguage] = useState(localStorage.getItem("language"));
-
+function Header({ language, setLanguage }) {
   // theme
   const getTheme = localStorage.getItem("theme");
   const [mode, setMode] = useState(getTheme || "light");
