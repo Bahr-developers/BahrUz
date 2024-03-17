@@ -27,12 +27,30 @@ function App() {
           path="/"
           element={<Home language={language} setLanguage={setLanguage} />}
         />
-        <Route path="about" element={<About />} />
-        <Route path="services" element={<Services />} />
-        <Route path="portfolio" element={<Portfolio />} />
-        <Route path="career" element={<Career  />} />
-        <Route path="blog" element={<Blog />} />
-        <Route path="portfolio" element={<Blog />} />
+        <Route
+          path="about"
+          element={<About language={language} setLanguage={setLanguage} />}
+        />
+        <Route
+          path="services"
+          element={<Services language={language} setLanguage={setLanguage} />}
+        />
+        <Route
+          path="portfolio"
+          element={<Portfolio language={language} setLanguage={setLanguage} />}
+        />
+        <Route
+          path="career"
+          element={<Career language={language} setLanguage={setLanguage} />}
+        />
+        <Route
+          path="blog"
+          element={<Blog language={language} setLanguage={setLanguage} />}
+        />
+        <Route
+          path="portfolio"
+          element={<Blog language={language} setLanguage={setLanguage} />}
+        />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>
