@@ -1,8 +1,9 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { AboutTitle } from "../utils/links";
 
-const About = () => {
 
+const About = ({ language }) => {
   return (
     <div className="xl:container mx-auto px-3 md:px-10  mt-24">
       <div className="mb-32 flex flex-col xl:flex-row gap-y-10 xl:gap-y-0 gap-10">
@@ -32,37 +33,27 @@ const About = () => {
           <div className="flex gap-1 items-end">
             <span className="block w-8 h-[2px] bg-blue-400 mb-3"></span>
             <h2 className="text-blue-500 text-lg dark:text-slate-200">
-              BIR SO&apos;Z BILAN AYTGANDA
+              {AboutTitle[language].subtitle}
             </h2>
           </div>
           <h3 className="text-4xl font-semibold text-blue-400 tracking-[1px] dark:text-slate-300 my-4 ">
-            BIZ HAQIMIZDA
+            {AboutTitle[language].title}
           </h3>
-          <p className="my-4 md:max-w-[90%]">
-            Har bir yirik kompaniya faqatgina o&apos;ziga emas, balki yonida
-            yelkadosh bo&apos;lgan hamda ishonganlarga minnatdorchilik
-            bildirishi lozim. Axir, bizning ishda eng muhim prinsip - bu
-            ishonch.
-          </p>
-          <p className="mb-6 md:max-w-[90%]">
-            Ishonch nafaqat mijoz va hamkorlar sadoqatini ta&apos;minlaydi,
-            qolversa, o&apos;zimizga bo&apos;lgan talabchanligimizni oshiradi.
-            Biz uzoq yillik insoniylik an&apos;analari ustiga qurilgan
-            munosabatlar asosida hamkorlik qilamiz.
-          </p>
+          <p className="my-4 md:max-w-[90%]">{AboutTitle[language].title1}</p>
+          <p className="mb-6 md:max-w-[90%]">{AboutTitle[language].title2}</p>
 
           <div className=" flex items-center gap-8">
             <div className="flex items-center gap-1">
               <span className="block mt-1 text-5xl">
                 <ion-icon name="flash-outline"></ion-icon>
               </span>
-              <p className="max-w-[100px]">Tezkor yechimlar</p>
+              <p className="max-w-[100px]">{AboutTitle[language].key1}</p>
             </div>
             <div className="flex items-center gap-1">
               <span className="block mt-1 text-5xl">
                 <ion-icon name="key-outline"></ion-icon>
               </span>
-              <p className="max-w-[100px]">Takrorlanmas loyihalar</p>
+              <p className="max-w-[100px]">{AboutTitle[language].key2}</p>
             </div>
           </div>
         </div>

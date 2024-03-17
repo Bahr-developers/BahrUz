@@ -25,14 +25,14 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={<Home language={language} onLanguage={setLanguage} />}
+          element={<Home language={language} setLanguage={setLanguage} />}
         />
         <Route path="about" element={<About />} />
         <Route path="services" element={<Services />} />
         <Route path="portfolio" element={<Portfolio />} />
         <Route path="career" element={<Career  />} />
         <Route path="blog" element={<Blog />} />
-        <Route path="portfolio" element={<Blog/>}/>
+        <Route path="portfolio" element={<Blog />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>

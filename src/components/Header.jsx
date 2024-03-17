@@ -1,4 +1,3 @@
-
 import { NavLink, Link, Outlet, useLocation } from "react-router-dom";
 
 import logo from "../assets/logo.jpg";
@@ -6,11 +5,7 @@ import logo from "../assets/logo.jpg";
 import { Links } from "../utils/links";
 import { useEffect, useState } from "react";
 
-function Header() {
-  // language
-  if (!localStorage.getItem("language")) localStorage.setItem("language", "uz");
-  const [language, setLanguage] = useState(localStorage.getItem("language"));
-
+function Header({ language, setLanguage }) {
   // theme
   const getTheme = localStorage.getItem("theme");
   const [mode, setMode] = useState(getTheme || "light");
@@ -105,7 +100,6 @@ function Header() {
                 className="dark:bg-transparent"
                 onChange={handleLanguageChange}
               >
-
                 <option value="uz">uz</option>
                 <option value="ru">ru</option>
                 <option value="en">en</option>
@@ -121,7 +115,6 @@ function Header() {
           {/* menu */}
           <div
             className={`fixed top-0 z-20 left-0 w-[50%] bg-white min-h-screen  transition-w  ease-in-out  duration-500 md:hidden dark:bg-slate-700  dark:text-white ${
-
               openMenu
                 ? "w-[70%] h-[100vh]"
                 : "w-0 opacity-0 pointer-events-none"
@@ -165,4 +158,4 @@ function Header() {
     </>
   );
 }
-export default Header
+export default Header;
