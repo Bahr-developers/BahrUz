@@ -106,16 +106,16 @@ function Header({ language, setLanguage }) {
                 <option value="en">en</option>
               </select>
             </div>
-            <div className="flex items-center gap-7">
+            <div className="flex items-center gap-7 md:hidden">
               <button
-                className="pt-2 text-xl md:hidden"
+                className="pt-2 text-xl"
                 onClick={() => setMode(mode === "light" ? "dark" : "light")}
               >
                 <ion-icon
                   name={`${mode === "light" ? "sunny" : "moon"}`}
                 ></ion-icon>
               </button>
-              <button className="text-3xl text-black flex items-center md:hidden  dark:text-white bg-[#ffffff29] rounded px-1 py-1">
+              <button className="text-3xl text-black flex items-center   dark:text-white bg-[#ffffff29] rounded px-1 py-1">
                 <ion-icon
                   name="menu"
                   onClick={() => setOpenMenu(true)}
