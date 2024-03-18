@@ -13,10 +13,10 @@ function Home({ language, setLanguage }) {
       <Header language={language} setLanguage={setLanguage} />
       <Hero language={language} />
       <About language={language} />
-      <Partfolio />
-      <Partner />
-      <Services />
-      <Careers />
+      <Partfolio language={language} />
+      <Partner language={language} />
+      <Services language={language} />
+      <Careers language={language} />
       <Footer />
     </>
   );

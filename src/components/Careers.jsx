@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import { careersTitle } from "../utils/links";
 
-const Careers = () => {
+const Careers = ({ language }) => {
   const [top, setTop] = useState("");
 
   useEffect(() => {
@@ -20,6 +21,7 @@ const Careers = () => {
   const handleTop = () => {
     window.scrollTo({ behavior: "smooth", top: 0 });
   };
+
   return (
     <div>
       <div className="xl:container mx-auto px-3 md:px-10">
@@ -27,36 +29,35 @@ const Careers = () => {
           <div className="join-us block md:flex   gap-2 items-center border rounded-xl p-5 md:p-10 py-8 md:py-10 ">
             <div className="join-us-text  w-[100%] md:w-[60%]">
               <h2 className="md:text-[30px] lg:text-[53px] text-[25px] font-black">
-                You can also be among this team :)
+                {careersTitle[language].title}
               </h2>
               <p className="md:text-[20px] lg:text-[25px] mt-2 text-[15px]  font-medium">
-                Do you want to growth with us? Now prove to us that you need it!
-                Become an integral part of the team
+                {careersTitle[language].subtitle}
               </p>
             </div>
             <div className="join-us-jobs mt-5 md:mt-0">
               <div className="joib-own w-[100%] flex items-center gap-4 mt-2">
                 <span className="block w-7 md:w-10 mt-[5px]  h-[3px] bg-slate-500 rounded-xl dark:bg-white"></span>
                 <p className="md:text-[23px] lg:text-[28px] text-[18px] font-bold">
-                  Frontend — ReactJS, Javascript
+                  Project manager
                 </p>
               </div>
               <div className="joib-own flex items-center gap-4 mt-2">
                 <span className="block w-8 md:w-10 mt-[5px] h-[4px] bg-slate-500 rounded-xl dark:bg-white"></span>
                 <p className="tmd:text-[23px] lg:text-[28px] text-[18px] font-bold">
-                  Android Application Programmer (Junior, Strong Junior)
+                  UI&UX designer
                 </p>
               </div>
               <div className="joib-own flex items-center gap-4 mt-2">
                 <span className="block w-7 md:w-10 mt-[5px] h-[3px] bg-slate-500 rounded-xl dark:bg-white"></span>
                 <p className="md:text-[23px] lg:text-[28px] text-[18px] font-bold">
-                  Flutter - developer
+                  Flutter developer
                 </p>
               </div>
               <div className="joib-own flex items-center mt-2 gap-4">
                 <span className="block w-7 md:w-10 mt-[5px] h-[3px] bg-slate-500 rounded-xl dark:bg-white"></span>
                 <p className="md:text-[23px] lg:text-[28px] text-[18px]  font-bold">
-                  Backend programmers.
+                  Backend developer(NodeJS/NestJS)
                 </p>
               </div>
             </div>
