@@ -86,3 +86,113 @@ export const AboutTitle = {
     key2: "Unique projects",
   },
 };
+
+
+export const Services = [
+  {
+    id: 1,
+    uz: {
+      title: "Veb-saytlar",
+      content: "Korporativ veb saytlardan tortib veb ilovalargacha bolgan murakkablikdagi internet saytlarni sifat kafolati bilan ishlab chiqami"
+    },
+    ru: {
+      title: "Веб-сайты",
+      content:"Мы разрабатываем веб-сайты с высоким качеством, от корпоративных сайтов до много-функциональных платформ."
+    },
+    en: {
+      title: "Veb-saytlar",
+      content: ""
+    }
+    
+  },
+  {
+    id: 2,  
+    uz: {
+      title: "UI&UX dizayn",
+      content: "Loyiha MindMapʼini ishlab chiqish va ushbu arxitektura asosida optimal yechimga ega dizaynlarni chizish"
+    },
+    ru: {
+      title: "UI&UX", 
+      content:"Разработка MindMap проекта и дизайн с оптимальным решением на основе его архитектуры"
+    },
+    en: {
+      title: "",
+      content: ""
+    }
+  },
+  {
+    id: 3,  
+    uz: {
+      title: "O'yinlar ishlab chiqarish",
+      content: "Xalqaro darajaga mos keladigan har qanday mavzu va murakkablikdagi o'yinlarni ishlab chiqish."
+    },
+    ru: {
+      title: "Разработка игр",
+      content:"Разработка игр любой тематики и сложности, соответствующие международному уровню."
+    },
+    en: {
+      title: "",
+      content: ""
+    }
+  },
+  {
+    id: 4,  
+    uz: {
+      title: "Kiberxavfsizlik",
+      content: "Tarmoqlar, qurilmalar, kodlar va ma'lumotlardagi zaifliklarni topish va tuzatish."
+    },
+    ru: {
+      title: "Кибербезопасность",
+      content:"Поиск и устранение уязвимостей в сетях, устройствах, кодах и в данных."
+    },
+    en: {
+      title: "",
+      content: ""
+    }
+  },
+  {
+    id: 5,  
+    uz: {
+      title: "Mobil ilovalar",
+      content: "Istalgan qiyinchilikdagi mobil ilovalarni ishlab chiqish va ularni texnik qoʻllab-quvvatlash"
+    },
+    ru: {
+      title: "Мобильные приложения",
+      content:"Разработка и техническая поддержка мобильных приложений любой сложности"
+    },
+    en: {
+      title: "",
+      content: ""
+    }
+  },
+  {
+    id: 6,  
+    uz: {
+      title: "Logo va brending",
+      content: "Biznesni ilgari surish uchun asosiy vositalar va marketing materiallari to'plamini noldan yaratish."
+    },
+    ru: {
+      title: "Брендинг",
+      content:"Разработка креативного и уникального логотипа для вашего проекта и создание его брендинга"
+    },
+    en: {
+      title: "",
+      content: ""
+    }
+  },
+  {
+    id: 7,  
+    uz: {
+      title: "Sun'iy intellekt",
+      content: "Inson aql-zakovati imkoniyatlariga ega intellektual kompyuter tizimlarini ishlab chiqish"
+    },
+    ru: {
+      title: "Искусственный интеллект",
+      content:"Разработка интеллектуальных компьютерных систем, обладающих возможностями человеческого интеллекта."
+    },
+    en: {
+      title: "",
+      content: ""
+    }
+  }
+]
