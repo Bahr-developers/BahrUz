@@ -16,9 +16,7 @@ function App() {
   const [language, setLanguage] = useState(localStorage.getItem("language"));
 
   console.log();
-  useEffect(()=>{
-    
-  },[language])
+  useEffect(() => {}, [language]);
 
   return (
     <div>

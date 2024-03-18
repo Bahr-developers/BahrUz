@@ -4,12 +4,11 @@ import { HeroTitle } from "../utils/links";
 
 function Hero({ language }) {
   const [text] = useTypewriter({
-    words: ["Norm Developers", "Simple Developers", "Modern Developers"],
+    words: ["Imagine", "Explore", "Innovate", "Imagine Explore Innovate"],
     loop: true,
     deleteSpeed: 50,
     typeSpeed: 100,
   });
-
 
   return (
     <div className="h-screen w-screen flex items-center px-3 md:px-10  justify-center hero__bg">

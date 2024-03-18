@@ -86,3 +86,180 @@ export const AboutTitle = {
     key2: "Unique projects",
   },
 };
+
+export const careersTitle = {
+  uz: {
+    title: "Bizning jamoaga qo'shiling",
+    subtitle:
+      "Biz bilan birga yuksalmoqchimisiz? Keling, bizga kerakligingizni isbotlang! Jamoaning ajralmas bo‘lagiga aylaning.",
+  },
+  ru: {
+    title: "Присоединиться к нашей команде",
+    subtitle:
+      "Расти вместе с нами! Продемонстрируйте свои навыки и станьте неотъемлемой частью команды",
+  },
+  en: {
+    title: "You can also be among this team",
+    subtitle:
+      "Do you want to growth with us? Now prove to us that you need it! Become an integral part of the team",
+  },
+};
+
+export const servicesCartTitle = {
+  uz: {
+    title: "Bizning",
+    subtitle: "Xizmatlarimiz",
+    services: [
+      {
+        id: 1,
+        title: "Veb sahifalar",
+        subtitle:
+          "Korporativ veb saytlardan tortib veb ilovalargacha boʻlgan murakkablikdagi internet saytlarni sifat kafolati bilan ishlab chiqamiz",
+      },
+      {
+        id: 2,
+        title: "Mobile ilovalar",
+        subtitle:
+          "Istalgan qiyinchilikdagi mobil ilovalarni ishlab chiqish va ularni texnik qoʻllab-quvvatlash",
+      },
+      {
+        id: 3,
+        title: "CRM, ERP va tizimlar",
+        subtitle:
+          "Biznesni va jarayonlarni avtomatlashtirish, kanselyariya ishlarini 100% gacha kamaytiruvchi boshqaruv elektron tizimlarini ishlab chiqish",
+      },
+      {
+        id: 4,
+        title: "Kiberxavfsizlik",
+        subtitle:
+          "Tarmoqlar, qurilmalar, kodlar va ma'lumotlardagi zaifliklarni topish va tuzatish.",
+      },
+      {
+        id: 5,
+        title: "Telegram bot",
+        subtitle:
+          "Biron narsa deb yozaylik o'shanga shunaqa deb qo'yaszmi shoh internet kerak edi do'st tar'ifni qayta yoqaymi yoki",
+      },
+      {
+        id: 6,
+        title: "UI & UX",
+        subtitle:
+          "Loyiha MindMapʼini ishlab chiqish va ushbu arxitektura asosida optimal yechimga ega dizaynlarni chizish",
+      },
+      {
+        id: 7,
+        title: "Sun'iy intellekt",
+        subtitle:
+          "Inson aql-zakovati imkoniyatlariga ega intellektual kompyuter tizimlarini ishlab chiqish",
+      },
+    ],
+  },
+  ru: {
+    title: "НАШИ",
+    subtitle: "Услуги",
+    services: [
+      {
+        id: 1,
+        title: "Веб-сайты",
+        subtitle:
+          "Мы разрабатываем веб-сайты с высоким качеством, от корпоративных сайтов до много-функциональных платформ.",
+      },
+      {
+        id: 2,
+        title: "Мобильные приложения",
+        subtitle:
+          "Разработка и техническая поддержка мобильных приложений любой сложности",
+      },
+      {
+        id: 3,
+        title: "CRM Системы",
+        subtitle:
+          "Автоматизация бизнеса и процессов, разработка электронных систем управления, сокращающих бумажный труд на 100%",
+      },
+      {
+        id: 4,
+        title: "Кибербезопасность",
+        subtitle:
+          "Поиск и устранение уязвимостей в сетях, устройствах, кодах и в данных.",
+      },
+      {
+        id: 5,
+        title: "Telegram bot",
+        subtitle:
+          "Biron narsa deb yozaylik o'shanga shunaqa deb qo'yaszmi shoh internet kerak edi do'st tar'ifni qayta yoqaymi yoki",
+      },
+      {
+        id: 6,
+        title: "UI & UX",
+        subtitle:
+          "Разработка MindMap проекта и дизайн с оптимальным решением на основе его архитектуры",
+      },
+      {
+        id: 7,
+        title: "Искусственный интеллект",
+        subtitle:
+          "Разработка интеллектуальных компьютерных систем, обладающих возможностями человеческого интеллекта.",
+      },
+    ],
+  },
+  en: {
+    title: "OUR",
+    subtitle: "Services",
+    services: [
+      {
+        id: 1,
+        title: "Web Development",
+        subtitle:
+          "We develop websites with the high quality, from corporate websites to web applications",
+      },
+      {
+        id: 2,
+        title: "Mobile apps",
+        subtitle:
+          "Development and technical support of mobile applications of any complexity",
+      },
+      {
+        id: 3,
+        title: "CRM Systems",
+        subtitle:
+          "Automation of business and processes, development of electronic management systems that reduce paper-work by 100%",
+      },
+      {
+        id: 4,
+        title: "Cybersecurity",
+        subtitle:
+          "Find and fix vulnerabilities in networks, devices, code, and data.",
+      },
+      {
+        id: 5,
+        title: "Telegram bot",
+        subtitle:
+          "Biron narsa deb yozaylik o'shanga shunaqa deb qo'yaszmi shoh internet kerak edi do'st tar'ifni qayta yoqaymi yoki",
+      },
+      {
+        id: 6,
+        title: "UI & UX",
+        subtitle:
+          "Developing a project MindMap and designing it with the optimal solution based on its architecture",
+      },
+      {
+        id: 7,
+        title: "Artificial intelligence",
+        subtitle:
+          "Development of intelligent computer systems with the capabilities of human intelligence.",
+      },
+    ],
+  },
+};
+
+export const PartnerTitle = {
+  uz: {
+    title: "Hamkorlarimiz",
+  },
+  ru: {
+    title: "НАШИ ПАРТНЕРЫ",
+  },
+  en: {
+    title: "OUR PARTNERS",
+  },
+};

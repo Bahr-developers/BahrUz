@@ -1,6 +1,6 @@
 import ParfolioCard from "./ParfolioCard";
 
-const Partfolio = () => {
+const Partfolio = ({ language }) => {
   return (
     <div className="xl:container mx-auto px-3 md:px-10">
       <div className="mb-28 partfolio">
