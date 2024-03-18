@@ -106,16 +106,26 @@ function Header({ language, setLanguage }) {
                 <option value="en">en</option>
               </select>
             </div>
-            <button className="text-3xl text-black flex items-center md:hidden  dark:text-white bg-[#ffffff29] rounded px-1 py-1">
-              <ion-icon
-                name="menu"
-                onClick={() => setOpenMenu(true)}
-              ></ion-icon>
-            </button>
+            <div className="flex items-center gap-7 md:hidden">
+              <button
+                className="pt-2 text-xl"
+                onClick={() => setMode(mode === "light" ? "dark" : "light")}
+              >
+                <ion-icon
+                  name={`${mode === "light" ? "sunny" : "moon"}`}
+                ></ion-icon>
+              </button>
+              <button className="text-3xl text-black flex items-center   dark:text-white bg-[#ffffff29] rounded px-1 py-1">
+                <ion-icon
+                  name="menu"
+                  onClick={() => setOpenMenu(true)}
+                ></ion-icon>
+              </button>
+            </div>
           </nav>
           {/* menu */}
           <div
-            className={`fixed top-0 z-20 left-0 w-[50%] bg-white min-h-screen  transition-w  ease-in-out  duration-500 md:hidden dark:bg-slate-700  dark:text-white ${
+            className={`fixed top-0 z-30 left-0 w-[50%] bg-white min-h-screen  transition-w  ease-in-out  duration-500 md:hidden dark:bg-slate-700  dark:text-white ${
               openMenu
                 ? "w-[70%] h-[100vh]"
                 : "w-0 opacity-0 pointer-events-none"

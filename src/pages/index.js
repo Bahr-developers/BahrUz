@@ -4,6 +4,6 @@ import Career from "./Career";
 import ErrorPage from "./ErrorPage";
 import Home from "./Home";
 import Portfolio from "./Portfolio";
-import Services from "./Services";
+import ServicesPage from "./ServicesPage";
 
-export { Home, Services, About, Portfolio, Career, Blog, ErrorPage };
+export { Home, ServicesPage, About, Portfolio, Career, Blog, ErrorPage };

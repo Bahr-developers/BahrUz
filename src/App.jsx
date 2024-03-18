@@ -1,6 +1,5 @@
 import "./index.css";
 import Home from "./pages/Home.jsx";
-import Services from "./pages/Services.jsx";
 import About from "./pages/About.jsx";
 import Portfolio from "./pages/Portfolio.jsx";
 import Career from "./pages/Career.jsx";
@@ -9,6 +8,7 @@ import ErrorPage from "./pages/ErrorPage.jsx";
 import { Route, Routes } from "react-router-dom";
 
 import { useEffect, useState } from "react";
+import ServicesPage from "./pages/ServicesPage.jsx";
 
 function App() {
   // language
@@ -31,7 +31,9 @@ function App() {
         />
         <Route
           path="services"
-          element={<Services language={language} setLanguage={setLanguage} />}
+          element={
+            <ServicesPage language={language} setLanguage={setLanguage} />
+          }
         />
         <Route
           path="portfolio"
