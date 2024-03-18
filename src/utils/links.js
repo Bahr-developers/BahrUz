@@ -48,9 +48,34 @@ export const Links = [
 ];
 
 export const HeroTitle = {
-  uz: "Bizning jamoamiz bu sohada professionallardir saytlar va mobil ilovalarni ishlab chiqish, saytlar, ijtimoiy tarmoqlar va video taqdimotlarni ilgari surish. o'z ishini sevadiganlar!",
-  ru: "Наша команда — профессионалы в области разработки сайтов и мобильных приложений, продвижения сайтов, социальных сетей и видеопрезентаций. те, кто любит свою работу!",
-  en: "Our team are professionals in the field of development of sites and mobile applications, promotion of sites, social networks and video presentations. those who love their work!",
+  uz: {
+    mainTitle: [
+      "Tasavvur qil",
+      "Yarat",
+      "Takomillashtir",
+      "Tassuvvur qil Yarat Takomillashtir",
+    ],
+    title:
+      "Bizning jamoamiz bu sohada professionallardir saytlar va mobil ilovalarni ishlab chiqish, saytlar, ijtimoiy tarmoqlar va video taqdimotlarni ilgari surish. o'z ishini sevadiganlar!",
+    call: "Qo'ng'iroq",
+  },
+  ru: {
+    mainTitle: [
+      "Представлять себе",
+      "Исследовать",
+      "Инновации",
+      "Представлять себе Исследовать Инновации",
+    ],
+    title:
+      "Наша команда — профессионалы в области разработки сайтов и мобильных приложений, продвижения сайтов, социальных сетей и видеопрезентаций. те, кто любит свою работу!",
+    call: "Вызов",
+  },
+  en: {
+    mainTitle: ["Explore", "Imagine", "Innovate", "Explore Imagine Innovate"],
+    title:
+      "Our team are professionals in the field of development of sites and mobile applications, promotion of sites, social networks and video presentations. those who love their work!",
+    call: "Call",
+  },
 };
 
 export const AboutTitle = {
