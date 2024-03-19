@@ -379,7 +379,7 @@ export const CareerTitle = {
   },
 };
 
-const AboutTitle = {
+export const AboutTitle2 = {
   uz: {
     title: "Biz haqimizda",
     subtitle:
