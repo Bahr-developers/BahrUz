@@ -487,3 +487,30 @@ export const CareerTitle = {
     ],
   },
 };
+
+const AboutTitle = {
+  uz: {
+    title: "Biz haqimizda",
+    subtitle:
+      "Bahr Tech IT kompaniyasiga 2023-yilda asos solingan. Kompaniya turli sohalar uchun innovatsion yechimlar taqdim etadi. Agar siz ham o'z biznesingizni rivojlantirmoqchi bo'lsangiz va IT yechimlar qidirayotgan bo'lsangiz unda aynan to'g'ri manzildasiz. Siz uchun 7 xil yo'nalishdagi xizmatlarni taklif qilamiz.",
+    preTitle:
+      "\n\nUlar quyidagilar: \n - Web ilovalar \n - Mobil ilovalar \n - CRM, ERP va tizimlar \n - Kiberxavfsizlik \n - Telegram bot \n - UI & UX \n - Sun'iy intellekt",
+    contact: "Murojaat uchun tel : ",
+  },
+  ru: {
+    title: "О нас",
+    subtitle:
+      "IT-компания Bahr Tech основана в 2023 году. Компания предоставляет инновационные решения для различных отраслей. Если вы также хотите развивать свой бизнес и ищете ИТ-решения, то вы попали по адресу. Мы предлагаем вам 7 различных услуг.",
+    preTitle:
+      "\n\nЭто: \n — Веб-приложения \n — Мобильные приложения \n — CRM, ERP и системы \n — Кибербезопасность \n — Telegram-бот \n — UI и UX \n — Искусственный интеллект",
+    contact: "Контактный телефон : ",
+  },
+  en: {
+    title: "About Us",
+    subtitle:
+      "Bahr Tech IT Company was founded in 2023. The company provides innovative solutions for various industries. If you also want to develop your business and are looking for IT solutions, then you are at the right place. We offer 7 different services for you.",
+    preTitle:
+      "\n\nThey are: \n - Web applications \n - Mobile applications \n - CRM, ERP and systems \n - Cyber ​​security \n - Telegram bot \n - UI & UX \n - Artificial intelligence",
+    contact: "For inquiries, phone : ",
+  },
+};
