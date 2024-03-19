@@ -46,7 +46,9 @@ function Header({ language, setLanguage }) {
   const isSticky = () => {
     const scrollTop = window.scrollY;
     const stickyClass =
-      scrollTop >= 50 ? "shadow-md backdrop-blur-[20px] z-10" : "";
+      scrollTop >= 50
+        ? "shadow-md backdrop-blur-[20px] bg-sky-500 dark:bg-slate-600"
+        : "";
     setSticky(stickyClass);
   };
 
@@ -56,8 +58,10 @@ function Header({ language, setLanguage }) {
     <>
       <header
         className={
-          `py-5 w-full  top-0  left-0 px-3 md:px-10 ${
-            location.pathname === "/" ? "fixed" : "sticky"
+          `py-5 w-full  top-0  left-0 px-3 md:px-10 z-30 ${
+            location.pathname === "/"
+              ? "fixed"
+              : "sticky bg-sky-500 dark:bg-slate-600"
           }` +
           " " +
           sticky
@@ -80,7 +84,9 @@ function Header({ language, setLanguage }) {
                     <NavLink
                       key={link.id}
                       to={link.to}
-                      className="py-1 px-2 hover:bg-slate-400 rounded hover:text-white"
+                      className={`py-1 px-2 hover:bg-slate-400 rounded hover:text-white text-white ${
+                        link.to === "/blog" ? "hidden" : ""
+                      }`}
                     >
                       <b>{link.content[language]}</b>
                     </NavLink>
@@ -88,7 +94,7 @@ function Header({ language, setLanguage }) {
                 })}
               </div>
               <button
-                className="pt-2 text-xl"
+                className="pt-2 text-xl text-white"
                 onClick={() => setMode(mode === "light" ? "dark" : "light")}
               >
                 <ion-icon
@@ -98,7 +104,7 @@ function Header({ language, setLanguage }) {
 
               <select
                 value={language}
-                className="dark:bg-transparent"
+                className="header__select  dark:bg-transparent border rounded focus:outline-none text-lg py-[2px] px-2"
                 onChange={handleLanguageChange}
               >
                 <option value="uz">uz</option>
@@ -108,14 +114,14 @@ function Header({ language, setLanguage }) {
             </div>
             <div className="flex items-center gap-7 md:hidden">
               <button
-                className="pt-2 text-xl"
+                className="pt-2 text-xl text-white"
                 onClick={() => setMode(mode === "light" ? "dark" : "light")}
               >
                 <ion-icon
                   name={`${mode === "light" ? "sunny" : "moon"}`}
                 ></ion-icon>
               </button>
-              <button className="text-3xl text-black flex items-center   dark:text-white bg-[#ffffff29] rounded px-1 py-1">
+              <button className="text-3xl  flex items-center text-white bg-[#ffffff29] rounded px-1 py-1">
                 <ion-icon
                   name="menu"
                   onClick={() => setOpenMenu(true)}
@@ -131,7 +137,7 @@ function Header({ language, setLanguage }) {
                 : "w-0 opacity-0 pointer-events-none"
             }`}
           >
-            <button className="text-3xl flex items-center absolute top-2 right-2  bg-slate-400 dark:text-white rounded px-1 py-1 text-white ">
+            <button className="text-3xl flex items-center absolute top-2 right-2  bg-slate-400  rounded px-1 py-1 text-white ">
               <ion-icon
                 name="close"
                 onClick={() => setOpenMenu(false)}
@@ -154,7 +160,9 @@ function Header({ language, setLanguage }) {
                   <Link
                     to={link.to}
                     key={link.id}
-                    className="text-black block dark:text-white px-6 py-4"
+                    className={`text-black block dark:text-white px-6 py-4 ${
+                      link.to === "/blog" ? "hidden" : ""
+                    }`}
                     onClick={() => setOpenMenu(false)}
                   >
                     {link.content[language]}

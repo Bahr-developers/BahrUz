@@ -7,9 +7,9 @@ function ServicesPage({ language, setLanguage }) {
   return (
     <>
       <Header language={language} setLanguage={setLanguage} />
-      <div className="container  mx-auto">
+      <div className="container  mx-auto px-3">
         <div>
-          <h3 className="text-sky-400 dark:text-slate-300 text-4xl my-10">
+          <h3 className="text-sky-400 dark:text-slate-300 text-5xl my-10">
             Services
           </h3>
           <div className="card-wrap mt-5 grid md:grid-cols-2 gap-3 mb-10">

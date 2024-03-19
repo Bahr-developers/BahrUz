@@ -6,9 +6,11 @@ const ParfolioCard = () => {
   return (
     <Link
       to="/portfolio"
-      className="parfolio-wrap rounded-md overflow-hidden relative"
+      className="parfolio-wrap rounded-md overflow-hidden relative "
+      data-aos="fade-up"
+      data-aos-anchor-placement="top-center"
     >
-      <div className="wrap relative w-[100%] block h-[340px]">
+      <div className="wrap relative w-[100%] block h-[340px] group">
         <div className="cart-title absolute z-10 pl-2 md:p-4">
           <h3 className="font-bold md:font-black text-[32px] md:text-[28px] text-white">
             Dachi v Gorax
@@ -25,8 +27,12 @@ const ParfolioCard = () => {
         <div className="overley absolute w-[100%] h-[100%] hover:bg-gradient-to-r from-[#44a08d8c]  to-[#093637cd] top-0 left-0 "></div>
         <div className="visit-all z-0 text-[30px] flex items-center gap-2 absolute bottom-5 right-5 ">
           {" "}
-          <p className="text-[22px] font-bold">Visit</p>{" "}
-          <ion-icon name="arrow-forward-outline"></ion-icon>
+          <p className="text-[22px] font-bold text-white items-center hidden group-hover:block">
+            Visit
+          </p>{" "}
+          <span className="text-white   items-center hidden group-hover:flex">
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </span>
         </div>
       </div>
     </Link>

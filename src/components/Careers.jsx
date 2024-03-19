@@ -24,7 +24,11 @@ const Careers = ({ language }) => {
 
   return (
     <div>
-      <div className="xl:container mx-auto px-3 md:px-10">
+      <div
+        className="xl:container mx-auto px-3 md:px-10"
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-center"
+      >
         <div className="footer-inner dark:bg-transparent">
           <div className="join-us block md:flex   gap-2 items-center border rounded-xl p-5 md:p-10 py-8 md:py-10 ">
             <div className="join-us-text  w-[100%] md:w-[60%]">

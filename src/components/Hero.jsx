@@ -12,12 +12,12 @@ function Hero({ language }) {
 
   return (
     <div className="h-screen w-screen flex items-center px-3 md:px-10  justify-center hero__bg">
-      <div>
-        <h1 className="text-5xl sm:text-7xl mb-12 dark:text-white text-left md:text-center">
+      <div data-aos="fade-up">
+        <h1 className="text-5xl sm:text-7xl mb-12 text-white text-left md:text-center">
           {text}
           <Cursor />
         </h1>
-        <p className="max-w-[500px] w-full text-lg text-left md:text-center md:mx-auto mb-12 dark:text-white md:text-2xl tracking-[1px] leading-loose">
+        <p className="max-w-[500px] w-full text-lg text-left md:text-center md:mx-auto mb-12 dark:text-white md:text-2xl tracking-[1px] leading-loose text-white">
           {HeroTitle[language].title}
         </p>
         <div className="flex items-center gap-10 md:justify-center">
