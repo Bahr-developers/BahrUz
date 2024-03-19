@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function ErrorPage() {
   return (
-    <div className="container mx-auto mt-10">
+    <div className="container mx-auto mt-10 px-3">
       <div className="text-[100px] text-yellow-500 text-center">
         <ion-icon name="warning"></ion-icon>
       </div>

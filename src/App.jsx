@@ -10,7 +10,15 @@ import { Route, Routes } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ServicesPage from "./pages/ServicesPage.jsx";
 
+//animation
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   // language
   if (!localStorage.getItem("language")) localStorage.setItem("language", "uz");
   const [language, setLanguage] = useState(localStorage.getItem("language"));

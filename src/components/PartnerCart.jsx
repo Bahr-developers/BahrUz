@@ -3,7 +3,10 @@ import PartnerLogo from "../assets/partner.jpg";
 
 function PartnerCart() {
   return (
-    <div className="partner-cart w-[150px] relative grayscale hover:grayscale-0 duration-200">
+    <div
+      className="partner-cart w-[150px] relative grayscale hover:grayscale-0 duration-200"
+      data-aos="flip-left"
+    >
       <LazyLoadImage
         width={150}
         className="cursor-pointer rounded"

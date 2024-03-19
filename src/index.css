@@ -12,33 +12,40 @@ nav a.active {
 .footer path {
   fill: #94a3b8;
 }
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;
 }
-.cart-title{
+.cart-title {
   margin-top: -550px;
   display: block;
   z-index: -1;
   transform: translateY(40px);
 }
 
-.parfolio-wrap:hover .cart-title{
-  overflow: hidden;       
+.parfolio-wrap:hover .cart-title {
+  overflow: hidden;
   margin-top: 0;
   transition: 500ms ease-in-out;
   display: block;
   z-index: 1;
 }
-.overley{
+.overley {
   display: none;
 }
 
-.parfolio-wrap:hover .overley{
+.parfolio-wrap:hover .overley {
   display: block;
-  background: #44a08db3;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2362636f, #3a9f8abd);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #0936377b, #44a08dbd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #44a08db3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2362636f,
+    #3a9f8abd
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #0936377b,
+    #44a08dbd
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .hero__bg {
@@ -48,9 +55,8 @@ body::-webkit-scrollbar{
   background-position: center;
 }
 
-
 @media (max-width: 556px) {
-  .partner-cart-wrap{
+  .partner-cart-wrap {
     display: grid;
     grid-template-rows: repeat(2, 150px);
     gap: 10px;
@@ -60,4 +66,11 @@ body::-webkit-scrollbar{
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
   }
+}
+
+.header__select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
 }
