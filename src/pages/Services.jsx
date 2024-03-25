@@ -5,7 +5,7 @@ function Services({ language, setLanguage }) {
   return (
     <>
       <Header language={language} setLanguage={setLanguage} />
-      <div className="xl:container px-10 mx-auto">Services</div>
+        <div className="xl:container px-10 mx-auto">Services</div>
       <Footer />
     </>
   );
