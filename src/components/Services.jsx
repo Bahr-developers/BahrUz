@@ -1,7 +1,11 @@
 import ServicesCart from "./ServicesCart";
 import { servicesCartTitle } from "../utils/links";
+import { useService } from "../Query";
 
 const Services = ({ language }) => {
+  // get Service
+  const getService = useService();
+
   return (
     <div className="xl:container mx-auto px-3 md:px-10 mb-24">
       <div className="services-wrap">
@@ -16,11 +20,11 @@ const Services = ({ language }) => {
         </h3>
         <div className="card-wrap mt-5 md:flex md:flex-wrap md:gap-5">
           <div className="card-wrap mt-5 grid md:grid-cols-2 gap-3">
-            {servicesCartTitle[language].services?.map((service) => (
+            {getService?.data?.data?.map((service) => (
               <ServicesCart
                 key={service.id}
-                title={service.title}
-                subtitle={service.subtitle}
+                title={service.name}
+                subtitle={service.description}
               />
             ))}
           </div>

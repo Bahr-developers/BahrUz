@@ -14,7 +14,7 @@ const Careers = ({ language }) => {
 
   const isTop = () => {
     const scrollTop = window.scrollY;
-    const stickyClass = scrollTop >= 50 ? "block" : "hidden";
+    const stickyClass = scrollTop >= 50 ? " block" : " hidden";
     setTop(stickyClass);
   };
 
@@ -70,11 +70,11 @@ const Careers = ({ language }) => {
             <button
               onClick={handleTop}
               className={
-                "border-sky-400  border-[2px] rounded-full w-14 h-14  ml-auto fixed bottom-16 right-5 " +
+                "border-sky-400  border-[2px] rounded-full w-14 h-14  ml-auto fixed bottom-[-40px] right-5 " +
                 top
               }
             >
-              <span className=" text-2xl flex justify-center text-sky-400  dark:text-white">
+              <span className="text-2xl flex justify-center text-sky-400  dark:text-white">
                 <ion-icon name="arrow-up"></ion-icon>
               </span>
             </button>

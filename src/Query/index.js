@@ -1,7 +1,2 @@
-import './get_all'
-import './query-key'
-
-
-export const ALL_DATA = {
-    
-}
+export * from "./get_all";
+export * from "./query-key";
