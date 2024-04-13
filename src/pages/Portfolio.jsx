@@ -6,6 +6,7 @@ function Portfolio({ language, setLanguage }) {
   return (
     <>
       <Header language={language} setLanguage={setLanguage} />
+
       <div className="container  px-3 mx-auto mt-8">
         <div className="mb-28 partfolio">
           <div className="partfolia-head md:flex justify-between items-center">

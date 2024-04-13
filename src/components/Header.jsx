@@ -1,11 +1,17 @@
 import { NavLink, Link, Outlet, useLocation } from "react-router-dom";
 
-import logo from "../assets/logo.jpg";
+import logo from "../../public/LogoBahrTech.svg";
 // Links
 import { Links } from "../utils/links";
 import { useEffect, useState } from "react";
+import { QUERY_KEY, useLanguage } from "../Query";
+import { data } from "autoprefixer";
+import { useQueryClient } from "@tanstack/react-query";
 
 function Header({ language, setLanguage }) {
+  // get Language
+  const getLanguage = useLanguage();
+
   // theme
   const getTheme = localStorage.getItem("theme");
   const [mode, setMode] = useState(getTheme || "light");
@@ -28,9 +34,12 @@ function Header({ language, setLanguage }) {
     }
   }, [mode]);
 
+  const queryClient = useQueryClient();
+
   const handleLanguageChange = (e) => {
     localStorage.setItem("language", e.target.value);
     setLanguage(e.target.value);
+    queryClient.invalidateQueries({ queryKey: [QUERY_KEY.service] });
     setOpenMenu(false);
   };
 
@@ -58,7 +67,7 @@ function Header({ language, setLanguage }) {
     <>
       <header
         className={
-          `py-5 w-full  top-0  left-0 px-3 md:px-10 z-30 ${
+          `py-3 md:py-5 w-full  top-0  left-0 px-3 md:px-10 z-30 ${
             location.pathname === "/"
               ? "fixed"
               : "sticky bg-sky-500 dark:bg-slate-600"
@@ -107,9 +116,14 @@ function Header({ language, setLanguage }) {
                 className="header__select  dark:bg-transparent border rounded focus:outline-none text-lg py-[2px] px-2"
                 onChange={handleLanguageChange}
               >
-                <option value="uz">uz</option>
-                <option value="ru">ru</option>
-                <option value="en">en</option>
+                {getLanguage?.data?.data &&
+                  getLanguage?.data?.data?.map((language) => {
+                    return (
+                      <option value={language.code} key={language._id}>
+                        {language.code}
+                      </option>
+                    );
+                  })}
               </select>
             </div>
             <div className="flex items-center gap-7 md:hidden">

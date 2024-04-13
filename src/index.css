@@ -35,21 +35,13 @@ body::-webkit-scrollbar {
 
 .parfolio-wrap:hover .overley {
   display: block;
-  background: #44a08db3; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #2362636f,
-    #3a9f8abd
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #0936377b,
-    #44a08dbd
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #44a08db3;
+  background: -webkit-linear-gradient(to right, #2362636f, #3a9f8abd);
+  background: linear-gradient(to right, #0936377b, #44a08dbd);
 }
 
 .hero__bg {
-  background-image: url("../public/bgHero.gif");
+  background-image: url("/bgHero.gif");
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
   background-position: center;
@@ -69,8 +61,5 @@ body::-webkit-scrollbar {
 }
 
 .header__select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  text-indent: 1px;
-  text-overflow: "";
+  appearance: none;
 }

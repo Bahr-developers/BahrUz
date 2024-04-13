@@ -12,6 +12,7 @@ function PartnerCart() {
         className="cursor-pointer rounded"
         src={PartnerLogo}
         alt="img"
+        effect="blur"
         height={145}
       />
     </div>
