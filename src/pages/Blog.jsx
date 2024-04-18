@@ -1,6 +1,5 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
-import PropTypes from "prop-types";
 
 function Blog({ language, setLanguage }) {
   return (
