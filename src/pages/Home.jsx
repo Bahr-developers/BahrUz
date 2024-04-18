@@ -6,8 +6,11 @@ import Hero from "../components/Hero";
 import Partfolio from "../components/Partfolio";
 import Partner from "../components/Partner";
 import Services from "../components/Services";
+import { useLanguage } from "../Query";
 
 function Home({ language, setLanguage }) {
+  const getLanguage = useLanguage();
+
   return (
     <>
       <Header language={language} setLanguage={setLanguage} />

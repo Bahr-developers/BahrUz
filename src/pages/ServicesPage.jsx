@@ -1,9 +1,13 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import ServicesCart from "../components/ServicesCart";
-import { servicesCartTitle } from "../utils/links";
+import { useService } from "../Query";
 
 function ServicesPage({ language, setLanguage }) {
+  const getService = useService();
+
+  console.log(getService.data?.data);
+
   return (
     <>
       <Header language={language} setLanguage={setLanguage} />
@@ -13,11 +17,11 @@ function ServicesPage({ language, setLanguage }) {
             Services
           </h3>
           <div className="card-wrap mt-5 grid md:grid-cols-2 gap-3 mb-10">
-            {servicesCartTitle[language].services?.map((service) => (
+            {getService?.data?.data?.map((service) => (
               <ServicesCart
                 key={service.id}
-                title={service.title}
-                subtitle={service.subtitle}
+                title={service.name}
+                subtitle={service.description}
               />
             ))}
           </div>

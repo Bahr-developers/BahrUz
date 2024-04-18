@@ -1,7 +1,10 @@
+import { usePartners } from "../Query";
 import { PartnerTitle } from "../utils/links";
 import PartnerCart from "./PartnerCart";
 
 function Partner({ language }) {
+  const getPartners = usePartners();
+
   return (
     <div className="xl:container mx-auto px-3 md:px-10">
       <div className="partner  mb-32">
@@ -11,12 +14,10 @@ function Partner({ language }) {
               {PartnerTitle[language].title}{" "}
             </h2>
             <div className="partner-cart-wrap mx-auto md:flex-wrap md:flex md:gap-4 mt-10">
-              <PartnerCart />
-              <PartnerCart />
-              <PartnerCart />
-              <PartnerCart />
-              <PartnerCart />
-              <PartnerCart />
+              {getPartners.data?.data.length &&
+                getPartners.data?.data.map((partner) => (
+                  <PartnerCart img={partner.image_url} key={partner._id} />
+                ))}
             </div>
           </div>
         </div>

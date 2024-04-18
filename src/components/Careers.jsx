@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { careersTitle } from "../utils/links";
+import { useCareer } from "../Query";
 
 const Careers = ({ language }) => {
   const [top, setTop] = useState("");
@@ -22,6 +23,8 @@ const Careers = ({ language }) => {
     window.scrollTo({ behavior: "smooth", top: 0 });
   };
 
+  const getCareer = useCareer();
+
   return (
     <div>
       <div
@@ -30,40 +33,28 @@ const Careers = ({ language }) => {
         data-aos-anchor-placement="top-center"
       >
         <div className="footer-inner dark:bg-transparent">
-          <div className="join-us block md:flex   gap-2 items-center border rounded-xl p-5 md:p-10 py-8 md:py-10 ">
+          <div className="join-us block md:flex   gap-2 items-center border rounded-xl p-5 md:p-10 py-8 md:py-8 ">
             <div className="join-us-text  w-[100%] md:w-[60%]">
-              <h2 className="md:text-[30px] lg:text-[53px] text-[25px] font-black">
+              <h2 className="md:text-[30px] lg:text-[45px] text-[25px] font-black text-blue-400 dark:text-slate-200">
                 {careersTitle[language].title}
               </h2>
-              <p className="md:text-[20px] lg:text-[25px] mt-2 text-[15px]  font-medium">
+              <p className="md:text-[20px] text-gray-400 dark:text-slate-100 lg:text-[25px] mt-2 text-[15px]  font-medium">
                 {careersTitle[language].subtitle}
               </p>
             </div>
             <div className="join-us-jobs mt-5 md:mt-0">
-              <div className="joib-own w-[100%] flex items-center gap-4 mt-2">
-                <span className="block w-7 md:w-10 mt-[5px]  h-[3px] bg-slate-500 rounded-xl dark:bg-white"></span>
-                <p className="md:text-[23px] lg:text-[28px] text-[18px] font-bold">
-                  Project manager
-                </p>
-              </div>
-              <div className="joib-own flex items-center gap-4 mt-2">
-                <span className="block w-8 md:w-10 mt-[5px] h-[4px] bg-slate-500 rounded-xl dark:bg-white"></span>
-                <p className="tmd:text-[23px] lg:text-[28px] text-[18px] font-bold">
-                  UI&UX designer
-                </p>
-              </div>
-              <div className="joib-own flex items-center gap-4 mt-2">
-                <span className="block w-7 md:w-10 mt-[5px] h-[3px] bg-slate-500 rounded-xl dark:bg-white"></span>
-                <p className="md:text-[23px] lg:text-[28px] text-[18px] font-bold">
-                  Flutter developer
-                </p>
-              </div>
-              <div className="joib-own flex items-center mt-2 gap-4">
-                <span className="block w-7 md:w-10 mt-[5px] h-[3px] bg-slate-500 rounded-xl dark:bg-white"></span>
-                <p className="md:text-[23px] lg:text-[28px] text-[18px]  font-bold">
-                  Backend developer(NodeJS/NestJS)
-                </p>
-              </div>
+              {getCareer.data?.data.length &&
+                getCareer.data?.data.map((career) => (
+                  <div
+                    className="joib-own w-[100%] flex items-center gap-4 mt-2"
+                    key={career.id}
+                  >
+                    <span className="block w-7 md:w-10 mt-[5px]  h-[3px] bg-gray-500 rounded-xl dark:bg-white"></span>
+                    <p className="md:text-[23px] text-gray-400 dark:text-slate-200 lg:text-[28px] text-[18px] font-bold">
+                      {career.name}
+                    </p>
+                  </div>
+                ))}
             </div>
           </div>
           <div className="footer-nav flex justify-between mt-10">

@@ -1,7 +1,8 @@
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import PartnerLogo from "../assets/partner.jpg";
 
-function PartnerCart() {
+import { IMG_BASE_URL } from "../constants/img.constants";
+
+function PartnerCart(props) {
   return (
     <div
       className="partner-cart w-[150px] relative grayscale hover:grayscale-0 duration-200"
@@ -10,7 +11,7 @@ function PartnerCart() {
       <LazyLoadImage
         width={150}
         className="cursor-pointer rounded"
-        src={PartnerLogo}
+        src={`${IMG_BASE_URL}${props.img}`}
         alt="img"
         effect="blur"
         height={145}
