@@ -14,7 +14,10 @@ import ServicesPage from "./pages/ServicesPage.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 function App() {
+  // animation library
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);

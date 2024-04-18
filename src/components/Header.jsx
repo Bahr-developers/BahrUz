@@ -4,8 +4,8 @@ import logo from "../../public/LogoBahrTech.svg";
 // Links
 import { Links } from "../utils/links";
 import { useEffect, useState } from "react";
-import { QUERY_KEY, useLanguage } from "../Query";
-import { data } from "autoprefixer";
+import { useLanguage } from "../Query";
+
 import { useQueryClient } from "@tanstack/react-query";
 
 function Header({ language, setLanguage }) {
@@ -39,7 +39,7 @@ function Header({ language, setLanguage }) {
   const handleLanguageChange = (e) => {
     localStorage.setItem("language", e.target.value);
     setLanguage(e.target.value);
-    queryClient.invalidateQueries({ queryKey: [QUERY_KEY.service] });
+    queryClient.invalidateQueries({ type: "all" });
     setOpenMenu(false);
   };
 
@@ -80,11 +80,7 @@ function Header({ language, setLanguage }) {
         <div className="container mx-auto">
           <nav className="flex items-center justify-between">
             <Link to="/">
-              <img
-                className="w-16 rounded-full shadow-md"
-                src={logo}
-                alt="logo"
-              />
+              <img className="w-36" src={logo} alt="logo" />
             </Link>
             <div className="md:flex hidden items-center gap-5 md:gap-10">
               <div className="flex items-center gap-2 lg:gap-6 ">
@@ -164,9 +160,14 @@ function Header({ language, setLanguage }) {
                   className="bg-transparent w-full outline-none cursor-pointer"
                   value={language}
                 >
-                  <option value="uz">uz</option>
-                  <option value="ru">ru</option>
-                  <option value="en">en</option>
+                  {getLanguage?.data?.data &&
+                    getLanguage?.data?.data?.map((language) => {
+                      return (
+                        <option value={language.code} key={language._id}>
+                          {language.code}
+                        </option>
+                      );
+                    })}
                 </select>
               </div>
               {Links.map((link) => {

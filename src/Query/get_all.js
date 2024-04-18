@@ -32,7 +32,7 @@ export const useCareer = () => {
   return useQuery({
     queryKey: [QUERY_KEY.career],
     queryFn: async () =>
-      await customAxios.get("career", {
+      await customAxios.get("career/find/all", {
         headers: {
           "accept-language": localStorage.getItem("language"),
         },
@@ -44,7 +44,7 @@ export const useProject = () => {
   return useQuery({
     queryKey: [QUERY_KEY.project],
     queryFn: async () =>
-      await customAxios.get("project", {
+      await customAxios.get("project/find/all", {
         headers: {
           "accept-language": localStorage.getItem("language"),
         },
@@ -55,11 +55,6 @@ export const useProject = () => {
 export const usePartners = () => {
   return useQuery({
     queryKey: [QUERY_KEY.partners],
-    queryFn: async () =>
-      await customAxios.get("partners", {
-        headers: {
-          "accept-language": localStorage.getItem("language"),
-        },
-      }),
+    queryFn: async () => await customAxios.get("partners/find/all"),
   });
 };

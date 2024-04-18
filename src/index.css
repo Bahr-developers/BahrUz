@@ -7,7 +7,7 @@ nav a.active {
   color: white;
 }
 .footer svg:hover path {
-  fill: #ffb534;
+  fill: #5fa5f9;
 }
 .footer path {
   fill: #94a3b8;
@@ -62,4 +62,5 @@ body::-webkit-scrollbar {
 
 .header__select {
   appearance: none;
+  cursor: pointer;
 }
