@@ -31,7 +31,6 @@ const Services = ({ language }) => {
         </div>
       </div>
     </div>
-    </div>
   );
 };
 
